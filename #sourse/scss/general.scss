@@ -108,6 +108,18 @@ img {
             margin-right: 10px;
         }
     }
+
+    &.longbtn {
+        width: 230px;
+    }
+
+    &.hover-white {
+        &:hover {
+            box-shadow: none !important;
+            background: #fff;
+            color: #ff7500;
+        }
+    }
 }
 
 @media(max-width:575.8px) {
