@@ -273,6 +273,31 @@
     }
 }
 
+.projectid {
+    color: #10284D;
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 500;
+
+    input {
+        border: none;
+        outline: none;
+        color: rgba(68, 92, 129, 0.57);
+        margin-left: 6px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: rgba(68, 92, 129, 0.57);
+        }
+    }
+
+    &+.orangebtn {
+        margin-top: 28px;
+    }
+}
+
+
 // step 4
 .inputfield.inputfield__check {
     input {
@@ -545,6 +570,16 @@
         font-size: 16px;
     }
 
+    .projectid {
+        font-size: 14px;
+
+        input {
+            font-size: 14px;
+        }
+    }
+
+
+
     // step4
     .btnsgroup .orangebtn {
         margin-top: 0;
@@ -574,11 +609,6 @@
     .signsteph1 br {
         display: none;
     }
-
-    // step6
-
-
-
 
 
 }
