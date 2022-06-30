@@ -1,0 +1,139 @@
+.boardprheader__team {
+    .boardprheader__title {
+        margin-right: 50px;
+    }
+
+    .boardprheader__inputbox {
+        max-width: 300px;
+    }
+
+
+}
+
+.teamroles {
+    width: 110px;
+    position: relative;
+
+    span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        border: 1.3px solid #EDEAE9;
+        width: 100%;
+        height: 32px;
+        color: #647CA1;
+        font-size: 14px;
+        line-height: 150%;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+
+        svg {
+            transition: 0.3s;
+            margin-left: 11px;
+
+            path {
+                transition: .3s;
+            }
+        }
+
+        &:hover {
+            border-color: #647CA1;
+        }
+
+        &.active {
+            border-color: #F58220;
+            color: #F58220;
+
+            svg {
+                transform: rotate(180deg);
+
+                path {
+                    stroke: #F58220;
+                }
+            }
+        }
+    }
+}
+
+.teamroles__list {
+    width: 166px;
+    background: #fff;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.11);
+    border-radius: 9px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 3px);
+    z-index: 3;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.teamroles__checkblock {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    input {
+        display: none;
+
+        &:checked+label {
+            &::before {
+                background-color: #F58220;
+                border-color: #F58220;
+                background-image: url('../img/checkwhite.png');
+                background-repeat: no-repeat;
+                background-size: 9px;
+                background-position: center;
+            }
+        }
+    }
+
+    label {
+        display: block;
+        color: #2C4469;
+        font-size: 15px;
+        line-height: 160%;
+        padding-left: 23px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-color: #F9F9F9;
+            border: 1px solid #C3C6D5;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
+
+.boardprheader__groupsect {
+    .addpeoplebtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        width: 143px;
+        height: 38px;
+        background: #F58220;
+        border-radius: 29px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 100%;
+        margin-right: 50px;
+    }
+}

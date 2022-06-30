@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Board</title>
+    <title>Team</title>
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -32,9 +32,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
 
                         <div class="projectsgroup">
                             <div class="projectsgroup__list">
@@ -269,18 +266,16 @@
                         </div>
                     </div>
 
-
-
                     <!-- sidebar menu -->
                     <div class="boardsidebar__nav">
                         <ul>
-                            <li class="active">
+                            <li>
                                 <a href="#">
                                     <span class="icon-board-icon"></span>
                                     Board
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#">
                                     <span class="icon-team-icon"></span>
                                     Team
@@ -309,46 +304,47 @@
             <!-- right sect -->
             <div class="boardrightsect enlarged">
                 <div class="boardprcont__wrapper">
-                    <div class="boardprheader">
+                    <div class="boardprheader boardprheader__team">
                         <div class="row">
                             <div class="col-lg-8 d-flex align-items-center col-md-5 flex-wrap order-md-1 order-2">
-                                <p class="boardprheader__title">Web design</p>
+                                <p class="boardprheader__title">Team</p>
                                 <div class="boardprheader__inputbox position-relative">
                                     <input type="text">
                                     <button class="p-0">
                                         <img src="img/search-icon.svg" alt="search">
                                     </button>
                                 </div>
-                                <div class="boardprheader__team d-flex align-items-center">
-                                    <div class="teamgroup d-flex align-items-center">
-                                        <div class="teamgroup__icon d-flex align-items-center justify-content-center"
-                                            style="background: #FFC233;">+10</div>
-                                        <div class="teamgroup__icon d-flex align-items-center justify-content-center"
-                                            style="background: #F58220;">tp</div>
-                                        <div class="teamgroup__icon d-flex align-items-center justify-content-center"
-                                            style="background: #5CA1FB;">ai</div>
-                                        <div class="teamgroup__icon d-flex align-items-center justify-content-center"
-                                            style="background: #185DAF;">
-                                            <img src="img/ava.png" alt="img">
+                                <div class="teamroles">
+                                    <span>
+                                        Roles
+                                        <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4043 1L5.4043 5L9.4043 1" stroke="#647CA1"
+                                                stroke-width="1.50811" stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="teamroles__list">
+                                        <div class="teamroles__checkblock">
+                                            <input type="checkbox" id="role1">
+                                            <label for="role1">Administrator</label>
+                                        </div>
+                                        <div class="teamroles__checkblock">
+                                            <input type="checkbox" id="role2">
+                                            <label for="role2">Member</label>
+                                        </div>
+                                        <div class="teamroles__checkblock">
+                                            <input type="checkbox" id="role3">
+                                            <label for="role3">Visitor</label>
                                         </div>
                                     </div>
-                                    <div class="addnew">
-                                        <div class="teamgroup__icon d-flex align-items-center justify-content-center"  data-bs-toggle="modal" data-bs-target="#addpeople">
-                                            <img src="img/add-user.svg" alt="add user">
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-7 order-md-2 order-1">
                                 <div class="boardprheader__groupsect d-flex justify-content-end align-items-center">
-                                    <div class="boardprheader__sort d-flex align-items-center">
-                                        <p>Group by</p>
-                                        <select class="custom-select" data-placeholder="Select" id="guestselectitem">
-                                            <option value="0">None</option>
-                                            <option value="1">Executor</option>
-                                            <option value="2">Subtask</option>
-                                        </select>
-                                    </div>
+                                    <a href="#" class="addpeoplebtn" data-bs-toggle="modal" data-bs-target="#addpeople">
+                                        Add people
+                                    </a>
                                     <div class="profilebox position-relative">
                                         <span class="profilebox__avatar">
                                             <img src="img/userimg.png" alt="img">
@@ -366,270 +362,17 @@
                         </div>
                     </div>
                     <!-- ------------------------------------- -->
-                    <div class="boardprbody d-flex">
-                        <div class="boardcolumn">
-                            <div class="boardcolumn__topsect">
-                                <div class="boardcolumn__title position-relative">
-                                    <p>To be completed 2 tasks</p>
-                                    <div class="boardcolumn__dotsmenu">
-                                        <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
-                                        </span>
-                                        <div class="boardcolumn__list">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="taskswrapper">
-                                    <div class="tasksbox">
-                                        <p>Draw a purchase page</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle red">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>To analyze the site</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">tp</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Uncountable noun when it means something we do that takes.</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle yellow">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Do that takes an effort, often as part of a job</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle blue">ia</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <a href="#">
-                                        <img src="img/addtask.svg" alt="img">
-                                        Add a task
-                                    </a>
-                                </div>
+                    <div class="boardprbody">
+                        <div class="test">dsadasd</div>
+                        <div id="list-of-divs">
+                            <div class="div" data-number="1" data-name="Irina Artemovich">Irina Artemovich</div>
+                            <div class="div" data-number="2" data-name="Taras Romanov">Taras Romanov</div>
+                            <div class="div" data-number="3" data-name="Andriy Peredruk">Andriy Peredruk</div>
+                            <div class="div" data-number="4" data-name="Tanya Melkova">Tanya Melkova</div>
+                            <div class="div" data-number="5" data-name="Vanessa Biliy">Vanessa Biliy</div>
+                         </div>
 
-                            </div>
-                        </div>
-                        <div class="boardcolumn">
-                            <div class="boardcolumn__topsect">
-                                <div class="boardcolumn__title position-relative">
-                                    <p>In Work 3 Tasks</p>
-                                    <div class="boardcolumn__dotsmenu">
-                                        <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
-                                        </span>
-                                        <div class="boardcolumn__list">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="taskswrapper">
-                                    <div class="tasksbox">
-                                        <p>Develop design</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle yellow">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Find a room for a birthday party</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">tp</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Meeting with a client at the Voyage restaurant at 14:00</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle red">ia</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <a href="#">
-                                        <img src="img/addtask.svg" alt="img">
-                                        Add a task
-                                    </a>
-                                </div>
 
-                            </div>
-                        </div>
-                        <div class="boardcolumn">
-                            <div class="boardcolumn__topsect">
-                                <div class="boardcolumn__title position-relative">
-                                    <p>Ready</p>
-                                    <div class="boardcolumn__dotsmenu">
-                                        <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
-                                        </span>
-                                        <div class="boardcolumn__list">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="taskswrapper">
-                                    <div class="tasksbox">
-                                        <p>Draw a purchase page</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle yellow">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Do that takes an effort, often as part of a job</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">tp</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Meeting with a client at the Voyage restaurant at 14:00</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle red">ia</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <a href="#">
-                                        <img src="img/addtask.svg" alt="img">
-                                        Add a task
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="boardcolumn">
-                            <div class="boardcolumn__topsect">
-                                <div class="boardcolumn__title position-relative">
-                                    <p>Company</p>
-                                    <div class="boardcolumn__dotsmenu">
-                                        <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
-                                        </span>
-                                        <div class="boardcolumn__list">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="taskswrapper">
-                                    <div class="tasksbox">
-                                        <p>Courses for designers in the field of development</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Find a room for a birthday party</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">tp</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <a href="#">
-                                        <img src="img/addtask.svg" alt="img">
-                                        Add a task
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="boardcolumn">
-                            <div class="boardcolumn__topsect">
-                                <div class="boardcolumn__title position-relative">
-                                    <p>Aventini lab</p>
-                                    <div class="boardcolumn__dotsmenu">
-                                        <span class="boardcolumn__dots">
-                                            <img src="img/dots.svg" alt="dots">
-                                        </span>
-                                        <div class="boardcolumn__list">
-                                            <ul>
-                                                <li>
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#deletemodal">
-                                                        <img src="img/trash.svg" alt="icon">
-                                                        Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="taskswrapper">
-                                    <div class="tasksbox">
-                                        <p>Courses for designers in the field of development</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">ia</span>
-                                        </div>
-                                    </div>
-                                    <div class="tasksbox">
-                                        <p>Find a room for a birthday party</p>
-                                        <div class="tasksbox__bottsect">
-                                            <span class="taskid">WEB-5</span>
-                                            <span class="usercircle orange">tp</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="addtasksect">
-                                <div class="addtasksect__btn text-center">
-                                    <a href="#">
-                                        <img src="img/addtask.svg" alt="img">
-                                        Add a task
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -638,28 +381,10 @@
     </div>
 
 
-    <!-- deletemodal -->
-    <div class="modal fade deletemodal" id="deletemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="deletemodal__content text-center">
-                    <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <img class="deletemodal__mainpic" src="img/trashimg-orange.svg" alt="img">
-                    <p class="title">Project Delete</p>
-                    <p class="descr">
-                        Are you sure you want to delete this object?
-                    </p>
-                    <div class="deletemodal__btns d-flex align-items-center justify-content-between">
-                        <a href="#" class="orangebtn white" data-bs-dismiss="modal">Cancel</a>
-                        <a href="#" class="orangebtn">Delete</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- addpeople -->
-    <div class="modal fade addpeople" id="addpeople" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade addpeople" id="addpeople" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="addpeople__content">
@@ -682,7 +407,7 @@
                                 <option value="2">Member</option>
                                 <option value="3">Visitor</option>
                             </select>
-                            
+
                         </div>
                         <div class="addpeoplebtn d-flex justify-content-end">
                             <input class="orangebtn" type="submit" value="Add">
@@ -692,9 +417,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
 

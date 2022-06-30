@@ -1,0 +1,160 @@
+.modal-content {
+    border: none;
+    border-radius: 22px;
+}
+
+.deletemodal,
+.addpeople {
+    .modal-dialog {
+        max-width: 411px;
+    }
+}
+
+.closemodal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    outline: none;
+    background: url('../img/close-modal.svg') no-repeat center / 100%;
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0;
+}
+
+.deletemodal__content {
+    padding: 40px 40px 35px 40px;
+
+    .title {
+        margin-bottom: 15px;
+        color: #10284D;
+        font-size: 22px;
+        line-height: 120%;
+        font-weight: 500;
+    }
+
+    .descr {
+        margin: 0;
+        color: #2C4469;
+        font-size: 15px;
+        line-height: 160%;
+    }
+}
+
+.deletemodal__mainpic {
+    max-width: 71px;
+    max-height: 71px;
+    margin-bottom: 20px;
+}
+
+.deletemodal__btns {
+    margin-top: 34px;
+
+    a.orangebtn {
+        height: 38px;
+        max-width: 143px;
+        font-size: 14px;
+        line-height: 100%;
+        border: 1px solid #F58220;
+    }
+}
+
+
+// form
+.addpeople {
+    .addpeople__content {
+        padding: 30px;
+    }
+}
+
+.modalform {
+    .inputfield {
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        input {
+            height: 40px;
+            padding-left: 15px;
+            font-size: 12px;
+            border-width: 1px;
+        }
+    }
+}
+
+.addpeople__title {
+    margin-bottom: 25px;
+    color: #10284D;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.addpeoplebtn {
+    .orangebtn {
+        border: none;
+        width: 126px;
+        height: 38px;
+        font-size: 14px;
+        line-height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:575.8px) {
+    .deletemodal .modal-dialog {
+        margin: 0.5rem auto;
+    }
+
+    .deletemodal .modal-dialog {
+        max-width: 300px;
+    }
+
+    .deletemodal__content {
+        padding: 30px 20px 25px 20px;
+    }
+
+    .deletemodal__mainpic {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .deletemodal__content .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .deletemodal__btns a.orangebtn {
+        max-width: 125px;
+    }
+
+    // add people
+    .addpeople .modal-dialog {
+        margin: 0.5rem auto;
+        max-width: 300px;
+    }
+
+    .addpeople__title {
+        margin-bottom: 15px;
+    }
+
+    .addpeople .addpeople__content {
+        padding: 30px 20px;
+    }
+
+    .modalform .inputfield {
+        margin-bottom: 15px;
+    }
+
+}
