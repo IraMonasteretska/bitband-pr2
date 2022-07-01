@@ -1,34 +1,4 @@
-// @font-face {
-//     font-family: 'gothamrnd_book';
-//     src: url('../fonts/gothamrnd_book.eot');
-//     src: url('../fonts/gothamrnd_book.eot') format('embedded-opentype'),
-//         url('../fonts/gothamrnd_book.woff2') format('woff2'),
-//         url('../fonts/gothamrnd_book.woff') format('woff'),
-//         url('../fonts/gothamrnd_book.ttf') format('truetype'),
-//         url('../fonts/gothamrnd_book.svg#gothamrnd_book') format('svg');
-// }
 
-// @font-face {
-//     font-family: 'gothamrnd_book';
-//     src: url('../fonts/gothamrnd_medium.eot');
-//     src: url('../fonts/gothamrnd_medium.eot') format('embedded-opentype'),
-//         url('../fonts/gothamrnd_medium.woff2') format('woff2'),
-//         url('../fonts/gothamrnd_medium.woff') format('woff'),
-//         url('../fonts/gothamrnd_medium.ttf') format('truetype'),
-//         url('../fonts/gothamrnd_medium.svg#gothamrnd_medium') format('svg');
-//     font-weight: 500;
-// }
-
-// @font-face {
-//     font-family: 'gothamrnd_book';
-//     src: url('../fonts/gothamrnd_bold.eot');
-//     src: url('../fonts/gothamrnd_bold.eot') format('embedded-opentype'),
-//         url('../fonts/gothamrnd_bold.woff2') format('woff2'),
-//         url('../fonts/gothamrnd_bold.woff') format('woff'),
-//         url('../fonts/gothamrnd_bold.ttf') format('truetype'),
-//         url('../fonts/gothamrnd_bold.svg#gothamrnd_bold') format('svg');
-//     font-weight: 600;
-// }
 
 @font-face {
     font-family: 'gothamrnd_bookrounded';
@@ -40,6 +10,12 @@
     font-family: 'gothamrnd_bookrounded';
     src: url('../fonts/GothamRounded-Book.otf');
     font-weight: 400;
+}
+
+@font-face {
+    font-family: 'gothamrnd_bookrounded';
+    src: url('../fonts/GothamRoundedLight.otf');
+    font-weight: 300;
 }
 
 

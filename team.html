@@ -302,11 +302,11 @@
             </aside>
 
             <!-- right sect -->
-            <div class="boardrightsect enlarged">
+            <div class="boardrightsect enlarged ">
                 <div class="boardprcont__wrapper">
-                    <div class="boardprheader boardprheader__team">
+                    <div class="boardprheader boardprheader__team ">
                         <div class="row">
-                            <div class="col-lg-8 d-flex align-items-center col-md-5 flex-wrap order-md-1 order-2">
+                            <div class="col-lg-8 d-flex align-items-center col-md-7 flex-wrap order-md-1 order-2 justify-content-md-start justify-content-between">
                                 <p class="boardprheader__title">Team</p>
                                 <div class="boardprheader__inputbox position-relative">
                                     <input type="text">
@@ -340,8 +340,8 @@
 
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-7 order-md-2 order-1">
-                                <div class="boardprheader__groupsect d-flex justify-content-end align-items-center">
+                            <div class="col-lg-4 col-md-5 order-md-2 order-1">
+                                <div class="boardprheader__groupsect d-flex justify-content-md-end justify-content-between align-items-center">
                                     <a href="#" class="addpeoplebtn" data-bs-toggle="modal" data-bs-target="#addpeople">
                                         Add people
                                     </a>
@@ -362,17 +362,126 @@
                         </div>
                     </div>
                     <!-- ------------------------------------- -->
-                    <div class="boardprbody">
-                        <div class="test">dsadasd</div>
-                        <div id="list-of-divs">
-                            <div class="div" data-number="1" data-name="Irina Artemovich">Irina Artemovich</div>
-                            <div class="div" data-number="2" data-name="Taras Romanov">Taras Romanov</div>
-                            <div class="div" data-number="3" data-name="Andriy Peredruk">Andriy Peredruk</div>
-                            <div class="div" data-number="4" data-name="Tanya Melkova">Tanya Melkova</div>
-                            <div class="div" data-number="5" data-name="Vanessa Biliy">Vanessa Biliy</div>
-                         </div>
-
-
+                    <div class="boardprbody boardprbody__team position-relative">
+                        <div class="table-wrapper">
+                            <table class="table table-borderless align-middle" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span class="sortbyname">Name <img src="img/table-arrow.svg"
+                                                    alt="arrow"></span></th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="team__name">
+                                            <div class="d-flex align-items-center">
+                                                <span class="red circle">ia</span>
+                                                <span class="name">Irina Artemovich</span>
+                                            </div>
+                                        </td>
+                                        <td class="team__email">name@company.com</td>
+                                        <td class="team__role text-end">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="genselect text-start">
+                                                    <select class="custom-select" data-placeholder="Select">
+                                                        <option value="0">Administrator</option>
+                                                        <option value="1">Member</option>
+                                                        <option value="2">Visitor</option>
+                                                    </select>
+                                                </div>
+                                                <a href="#">Remove</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="team__name">
+                                            <div class="d-flex align-items-center">
+                                                <span class="orange circle">tr</span>
+                                                <span class="name">Taras Romanov</span>
+                                            </div>
+                                        </td>
+                                        <td class="team__email">&mdash;</td>
+                                        <td class="team__role text-end">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="genselect text-start">
+                                                    <select class="custom-select" data-placeholder="Select">
+                                                        <option value="0">Administrator</option>
+                                                        <option value="1" selected>Member</option>
+                                                        <option value="2">Visitor</option>
+                                                    </select>
+                                                </div>
+                                                <a href="#">Remove</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="team__name">
+                                            <div class="d-flex align-items-center">
+                                                <span class="blue circle">ap</span>
+                                                <span class="name">Andriy Peredruk</span>
+                                            </div>
+                                        </td>
+                                        <td class="team__email">&mdash;</td>
+                                        <td class="team__role text-end">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="genselect text-start">
+                                                    <select class="custom-select" data-placeholder="Select">
+                                                        <option value="0">Administrator</option>
+                                                        <option value="1" selected>Member</option>
+                                                        <option value="2">Visitor</option>
+                                                    </select>
+                                                </div>
+                                                <a href="#">Remove</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="team__name">
+                                            <div class="d-flex align-items-center">
+                                                <span class="yellow circle">tm</span>
+                                                <span class="name">Tanya Melkova</span>
+                                            </div>
+                                        </td>
+                                        <td class="team__email">tanya.melkova@company.com</td>
+                                        <td class="team__role text-end">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="genselect text-start">
+                                                    <select class="custom-select" data-placeholder="Select">
+                                                        <option value="0">Administrator</option>
+                                                        <option value="1" selected>Member</option>
+                                                        <option value="2">Visitor</option>
+                                                    </select>
+                                                </div>
+                                                <a href="#">Remove</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="team__name">
+                                            <div class="d-flex align-items-center">
+                                                <span class="violet circle">vb</span>
+                                                <span class="name">Vanessa Biliy</span>
+                                            </div>
+                                        </td>
+                                        <td class="team__email">name@company.com</td>
+                                        <td class="team__role text-end">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="genselect text-start">
+                                                    <select class="custom-select" data-placeholder="Select">
+                                                        <option value="0">Administrator</option>
+                                                        <option value="1" selected>Member</option>
+                                                        <option value="2">Visitor</option>
+                                                    </select>
+                                                </div>
+                                                <a href="#">Remove</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

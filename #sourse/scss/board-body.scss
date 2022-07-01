@@ -151,7 +151,7 @@
     top: -3px;
     height: 27px;
     width: 27px;
-    background: #BEDBF4;
+    // background: #BEDBF4;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -203,7 +203,7 @@
     }
 }
 
-.boardcolumn {
+.boardcolumn .boardcolumn__title:hover {
     &:hover {
         .boardcolumn__dotsmenu {
             opacity: 1;
