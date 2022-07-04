@@ -334,11 +334,11 @@ $(document).ready(function () {
             minimumResultsForSearch: -1,
 
             templateResult: function (idioma) {
-                var $span = $("<span><img src='../img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+                var $span = $("<span><img src='img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
                 return $span;
             },
             templateSelection: function (idioma) {
-                var $span = $("<span><img src='../img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+                var $span = $("<span><img src='img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
                 return $span;
             },
 
