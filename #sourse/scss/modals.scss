@@ -10,6 +10,12 @@
     }
 }
 
+.littmodal {
+    .modal-dialog {
+        max-width: 387px;
+    }
+}
+
 .closemodal {
     position: absolute;
     right: 20px;
@@ -22,7 +28,8 @@
     padding: 0;
 }
 
-.deletemodal__content {
+.deletemodal__content,
+.littmodal__content {
     padding: 40px 40px 35px 40px;
 
     .title {
@@ -41,13 +48,15 @@
     }
 }
 
-.deletemodal__mainpic {
+.deletemodal__mainpic,
+.littmodal__mainpic {
     max-width: 71px;
     max-height: 71px;
     margin-bottom: 20px;
 }
 
-.deletemodal__btns {
+.deletemodal__btns,
+.littmodal__btns {
     margin-top: 34px;
 
     a.orangebtn {
@@ -156,6 +165,8 @@
     .modalform .inputfield {
         margin-bottom: 15px;
     }
+
+
 
 }
 
@@ -1401,5 +1412,40 @@
     .settrow input {
         max-width: 100%;
     }
+
+}
+
+
+// LOGOUT
+
+@media(max-width:575.8px) {
+    .littmodal {
+        .modal-dialog {
+            max-width: 300px;
+            margin: 0.5rem auto;
+        }
+    }
+
+    .littmodal__mainpic {
+        max-width: 50px;
+        max-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .littmodal__content {
+        padding: 30px 20px 25px 20px;
+    }
+
+    .littmodal__content .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .littmodal__btns a.orangebtn {
+        max-width: 125px;
+    }
+
+
+
 
 }

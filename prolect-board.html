@@ -365,7 +365,7 @@
                                                 <li><a class="myprofile" href="#" data-bs-toggle="modal"
                                                         data-bs-target="#profilesett">My
                                                         Profile</a></li>
-                                                <li><a href="#">Logout</a></li>
+                                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#logoutmodal">Logout</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1271,6 +1271,34 @@
             </div>
         </div>
     </div>
+
+    <!-- logout -->
+
+    <div class="modal fade littmodal" id="logoutmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="littmodal__content text-center">
+                    <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="littmodal__mainpic" src="img/exit.svg" alt="img">
+                    <p class="title">Log out?</p>
+                    <p class="descr">
+                        Do you want to log out?
+                    </p>
+                    <div class="littmodal__btns d-flex align-items-center justify-content-between">
+                        <a href="#" class="orangebtn white" data-bs-dismiss="modal">Cancel</a>
+                        <a href="#" class="orangebtn">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
 
     <script src="js/lib/jquery.js"></script>

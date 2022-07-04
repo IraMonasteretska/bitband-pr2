@@ -306,7 +306,8 @@
                 <div class="boardprcont__wrapper">
                     <div class="boardprheader boardprheader__team ">
                         <div class="row">
-                            <div class="col-lg-8 d-flex align-items-center col-md-7 flex-wrap order-md-1 order-2 justify-content-md-start justify-content-between">
+                            <div
+                                class="col-lg-8 d-flex align-items-center col-md-7 flex-wrap order-md-1 order-2 justify-content-md-start justify-content-between">
                                 <p class="boardprheader__title">Team</p>
                                 <div class="boardprheader__inputbox position-relative">
                                     <input type="text">
@@ -341,7 +342,8 @@
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-5 order-md-2 order-1">
-                                <div class="boardprheader__groupsect d-flex justify-content-md-end justify-content-between align-items-center">
+                                <div
+                                    class="boardprheader__groupsect d-flex justify-content-md-end justify-content-between align-items-center">
                                     <a href="#" class="addpeoplebtn" data-bs-toggle="modal" data-bs-target="#addpeople">
                                         Add people
                                     </a>
@@ -360,7 +362,7 @@
                                                 <li><a class="myprofile" href="#" data-bs-toggle="modal"
                                                         data-bs-target="#profilesett">My
                                                         Profile</a></li>
-                                                <li><a href="#">Logout</a></li>
+                                                <li><a href="#" data-bs-toggle="modal" data-bs-target="#logoutmodal">Logout</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -534,278 +536,342 @@
         </div>
     </div>
 
-<!-- Profile & Settings -->
-<div class="modal fade profilesett" id="profilesett" tabindex="-1" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="proffsett-wrap">
-            <div class="proffsett__header">
-                <p class="profilesett__title">Profile & Settings</p>
+    <!-- Profile & Settings -->
+    <div class="modal fade profilesett" id="profilesett" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="proffsett-wrap">
+                    <div class="proffsett__header">
+                        <p class="profilesett__title">Profile & Settings</p>
 
-                <!-- Tabs btns -->
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
-                            data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
-                            aria-selected="true">Profile</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="settings-tab" data-bs-toggle="tab"
-                            data-bs-target="#settings" type="button" role="tab" aria-controls="settings"
-                            aria-selected="false">Settings</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="password-tab" data-bs-toggle="tab"
-                            data-bs-target="#password" type="button" role="tab" aria-controls="password"
-                            aria-selected="false">Password</button>
-                    </li>
-                </ul>
+                        <!-- Tabs btns -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                                    aria-selected="true">Profile</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="settings-tab" data-bs-toggle="tab"
+                                    data-bs-target="#settings" type="button" role="tab" aria-controls="settings"
+                                    aria-selected="false">Settings</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="password-tab" data-bs-toggle="tab"
+                                    data-bs-target="#password" type="button" role="tab" aria-controls="password"
+                                    aria-selected="false">Password</button>
+                            </li>
+                        </ul>
 
 
-            </div>
-
-            <!-- ----------------------------- -->
-            <div class="proffsett__body">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="profile" role="tabpanel"
-                        aria-labelledby="profile-tab">
-                        <form action="#">
-                            <div class="profilenamesect d-flex align-items-center">
-                                <div class="profilenamesect__photo">
-                                    <input type="file" id="choosephoto">
-                                    <label for="choosephoto">
-                                        <img src="img/loadphoto.png" alt="img">
-                                    </label>
-                                </div>
-                                <div class="profilenamesect__name">
-                                    <p class="fl-name m-0">Maxim Katz</p>
-                                    <p class="subtitle m-0">Upload your photo</p>
-                                </div>
-                            </div>
-                            <div class="profilenamesect__inputssect d-flex justify-content-between">
-                                <div class="inputfield reverse">
-                                    <input id="prof" type="text" class="form-control" placeholder="">
-                                    <label for="prof" class="form-label d-block w-100">Email</label>
-                                </div>
-
-                                <div class="inputfield reverse">
-                                    <input id="company" type="text" class="form-control" placeholder="">
-                                    <label for="company" class="form-label d-block w-100">Your company</label>
-                                </div>
-
-                                <div class="inputfield reverse">
-                                    <input id="location" type="text" class="form-control" placeholder="">
-                                    <label for="location" class="form-label d-block w-100">Your location</label>
-                                </div>
-
-                                <div class="inputfield reverse">
-                                    <input id="settemail" type="email" class="form-control" placeholder="">
-                                    <label for="settemail" class="form-label d-block w-100">Email</label>
-                                </div>
-
-                                <div class="inputfield reverse fullwidth">
-                                    <textarea placeholder="Add a comment..." id="abme"></textarea>
-                                    <label for="abme" class="form-label d-block w-100">About me</label>
-                                </div>
-                            </div>
-                            <div class="profilenamesect__bottbtns d-flex justify-content-md-end justify-content-center">
-                                <a href="#" class="orangebtn white" data-bs-dismiss="modal"
-                                    aria-label="Close">Cancel</a>
-                                <button class="orangebtn">Save</button>
-                            </div>
-                        </form>
                     </div>
-                    <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <form action="#">
-                            <div class="settrow">
-                                <p class="title">Language</p>
-                                <!-- lang-select -->
-                                <select class="custom-select languageselect" id="lang-select">
-                                    <option value="eng" selected>English</option>
-                                    <option value="gr">German</option>
-                                    <option value="fr">French</option>
-                                    <option value="it">Italian</option>
-                                </select>
-                            </div>
-                            <div class="settrow">
-                                <p class="title">Notifications</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="notifselect">
-                                            <label class="settlabel" for="notice-select">Notice</label>
-                                            <select class="custom-select settselect" id="notice-select"
-                                                data-placeholder="Pause notifications">
-                                                <option value=""></option>
-                                                <option value="1">30 min</option>
-                                                <option value="2">1 hour</option>
-                                                <option value="3">2 hour</option>
-                                                <option value="4">4 hour</option>
-                                                <option value="5">8 hour</option>
-                                                <option value="6">Tomorrow</option>
-                                            </select>
+
+                    <!-- ----------------------------- -->
+                    <div class="proffsett__body">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="profile" role="tabpanel"
+                                aria-labelledby="profile-tab">
+                                <form action="#">
+                                    <div class="profilenamesect d-flex align-items-center">
+                                        <div class="profilenamesect__photo">
+                                            <input type="file" id="choosephoto">
+                                            <label for="choosephoto">
+                                                <img src="img/loadphoto.png" alt="img">
+                                            </label>
+                                        </div>
+                                        <div class="profilenamesect__name">
+                                            <p class="fl-name m-0">Maxim Katz</p>
+                                            <p class="subtitle m-0">Upload your photo</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="settlabel" for="notice-select">Don't notify me
-                                            with:</label>
-                                        <div class="d-flex dontnotif">
-                                            <input type="text" placeholder="18:00">
-                                            <span>on</span>
-                                            <input type="text" placeholder="09:00">
+                                    <div class="profilenamesect__inputssect d-flex justify-content-between">
+                                        <div class="inputfield reverse">
+                                            <input id="prof" type="text" class="form-control" placeholder="">
+                                            <label for="prof" class="form-label d-block w-100">Email</label>
+                                        </div>
+
+                                        <div class="inputfield reverse">
+                                            <input id="company" type="text" class="form-control" placeholder="">
+                                            <label for="company" class="form-label d-block w-100">Your company</label>
+                                        </div>
+
+                                        <div class="inputfield reverse">
+                                            <input id="location" type="text" class="form-control" placeholder="">
+                                            <label for="location" class="form-label d-block w-100">Your location</label>
+                                        </div>
+
+                                        <div class="inputfield reverse">
+                                            <input id="settemail" type="email" class="form-control" placeholder="">
+                                            <label for="settemail" class="form-label d-block w-100">Email</label>
+                                        </div>
+
+                                        <div class="inputfield reverse fullwidth">
+                                            <textarea placeholder="Add a comment..." id="abme"></textarea>
+                                            <label for="abme" class="form-label d-block w-100">About me</label>
                                         </div>
                                     </div>
+                                    <div
+                                        class="profilenamesect__bottbtns d-flex justify-content-md-end justify-content-center">
+                                        <a href="#" class="orangebtn white" data-bs-dismiss="modal"
+                                            aria-label="Close">Cancel</a>
+                                        <button class="orangebtn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                                <form action="#">
+                                    <div class="settrow">
+                                        <p class="title">Language</p>
+                                        <!-- lang-select -->
+                                        <select class="custom-select languageselect" id="lang-select">
+                                            <option value="eng" selected>English</option>
+                                            <option value="gr">German</option>
+                                            <option value="fr">French</option>
+                                            <option value="it">Italian</option>
+                                        </select>
+                                    </div>
+                                    <div class="settrow">
+                                        <p class="title">Notifications</p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="notifselect">
+                                                    <label class="settlabel" for="notice-select">Notice</label>
+                                                    <select class="custom-select settselect" id="notice-select"
+                                                        data-placeholder="Pause notifications">
+                                                        <option value=""></option>
+                                                        <option value="1">30 min</option>
+                                                        <option value="2">1 hour</option>
+                                                        <option value="3">2 hour</option>
+                                                        <option value="4">4 hour</option>
+                                                        <option value="5">8 hour</option>
+                                                        <option value="6">Tomorrow</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="settlabel" for="notice-select">Don't notify me
+                                                    with:</label>
+                                                <div class="d-flex dontnotif">
+                                                    <input type="text" placeholder="18:00">
+                                                    <span>on</span>
+                                                    <input type="text" placeholder="09:00">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="settrow">
+                                        <p class="title">Email Notifications</p>
+                                        <div class="inputfield reverse">
+                                            <input id="email" type="email" class="form-control"
+                                                placeholder="name@company.com">
+                                            <label for="email" class="settlabel">Preferred email address</label>
+                                        </div>
+                                        <div class="checkgroup">
+                                            <p class="settlabel">Notify me by email of the following:</p>
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck1">
+                                                <label for="settcheck1">You are <b>tracking</b> a task</label>
+                                            </div>
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck2">
+                                                <label for="settcheck2">You are the <b>author</b></label>
+                                            </div>
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck3">
+                                                <label for="settcheck3">You <b>make changes</b> to a task</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="settrow">
+                                        <p class="title mb-2">Project notifications</p>
+                                        <p class="descr">Set default notification settings for future projects you'll be
+                                            involved with.</p>
+                                        <div class="checkgroup">
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck4">
+                                                <label for="settcheck4">Status updates</label>
+                                            </div>
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck5">
+                                                <label for="settcheck5">Messages</label>
+                                            </div>
+                                            <div class="settcheckfield">
+                                                <input type="checkbox" id="settcheck6">
+                                                <label for="settcheck6">Added tasks</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="profilenamesect__bottbtns d-flex justify-content-md-end justify-content-center">
+                                        <a href="#" class="orangebtn white" data-bs-dismiss="modal"
+                                            aria-label="Close">Cancel</a>
+                                        <button class="orangebtn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+                                <div class="settchangepass">
+                                    <p class="title">Password change</p>
+
+                                    <div class="inputfield reverse">
+                                        <input id="pass" type="password" class="form-control">
+                                        <label for="pass" class="form-label d-block w-100">Current Password</label>
+                                        <span class="togglepass" id="tooglepass">
+                                            <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_560_37674)">
+                                                    <path
+                                                        d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
+                                                        fill="#000"></path>
+                                                    <path
+                                                        d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
+                                                        fill="#000"></path>
+                                                    <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_560_37674">
+                                                        <rect width="24.7273" height="18.5" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                    <div class="inputfield reverse">
+                                        <input id="pass" type="password" class="form-control">
+                                        <label for="pass" class="form-label d-block w-100">New Password</label>
+                                        <span class="togglepass" id="tooglepass2">
+                                            <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_560_37674)">
+                                                    <path
+                                                        d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
+                                                        fill="#000"></path>
+                                                    <path
+                                                        d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
+                                                        fill="#000"></path>
+                                                    <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_560_37674">
+                                                        <rect width="24.7273" height="18.5" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                    <div class="inputfield reverse">
+                                        <input id="pass" type="password" class="form-control">
+                                        <label for="pass" class="form-label d-block w-100">Repeat Password</label>
+                                        <span class="togglepass" id="tooglepass3">
+                                            <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_560_37674)">
+                                                    <path
+                                                        d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
+                                                        fill="#000"></path>
+                                                    <path
+                                                        d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
+                                                        fill="#000"></path>
+                                                    <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_560_37674">
+                                                        <rect width="24.7273" height="18.5" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                    <div class="resetpass d-flex justify-content-between align-items-center">
+                                        <a href="#" class="fgpass">Forgot your password?</a>
+                                        <a href="#" class="respass">Reset password via email mail</a>
+                                    </div>
+
+                                    <div class="profilenamesect__bottbtns d-flex justify-content-between">
+                                        <a href="#" class="orangebtn white" data-bs-dismiss="modal"
+                                            aria-label="Close">Cancel</a>
+                                        <button class="orangebtn">Save</button>
+                                    </div>
                                 </div>
-
-                            </div>
-                            <div class="settrow">
-                                <p class="title">Email Notifications</p>
-                                <div class="inputfield reverse">
-                                    <input id="email" type="email" class="form-control"
-                                        placeholder="name@company.com">
-                                    <label for="email" class="settlabel">Preferred email address</label>
-                                </div>
-                                <div class="checkgroup">
-                                    <p class="settlabel">Notify me by email of the following:</p>
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck1">
-                                        <label for="settcheck1">You are <b>tracking</b> a task</label>
-                                    </div>
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck2">
-                                        <label for="settcheck2">You are the <b>author</b></label>
-                                    </div>
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck3">
-                                        <label for="settcheck3">You <b>make changes</b> to a task</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="settrow">
-                                <p class="title mb-2">Project notifications</p>
-                                <p class="descr">Set default notification settings for future projects you'll be
-                                    involved with.</p>
-                                <div class="checkgroup">
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck4">
-                                        <label for="settcheck4">Status updates</label>
-                                    </div>
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck5">
-                                        <label for="settcheck5">Messages</label>
-                                    </div>
-                                    <div class="settcheckfield">
-                                        <input type="checkbox" id="settcheck6">
-                                        <label for="settcheck6">Added tasks</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="profilenamesect__bottbtns d-flex justify-content-md-end justify-content-center">
-                                <a href="#" class="orangebtn white" data-bs-dismiss="modal"
-                                    aria-label="Close">Cancel</a>
-                                <button class="orangebtn">Save</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
-                        <div class="settchangepass">
-                            <p class="title">Password change</p>
-
-                            <div class="inputfield reverse">
-                                <input id="pass" type="password" class="form-control">
-                                <label for="pass" class="form-label d-block w-100">Current Password</label>
-                                <span class="togglepass" id="tooglepass">
-                                    <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_560_37674)">
-                                            <path
-                                                d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
-                                                fill="#000"></path>
-                                            <path
-                                                d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
-                                                fill="#000"></path>
-                                            <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_560_37674">
-                                                <rect width="24.7273" height="18.5" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <div class="inputfield reverse">
-                                <input id="pass" type="password" class="form-control">
-                                <label for="pass" class="form-label d-block w-100">New Password</label>
-                                <span class="togglepass" id="tooglepass2">
-                                    <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_560_37674)">
-                                            <path
-                                                d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
-                                                fill="#000"></path>
-                                            <path
-                                                d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
-                                                fill="#000"></path>
-                                            <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_560_37674">
-                                                <rect width="24.7273" height="18.5" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <div class="inputfield reverse">
-                                <input id="pass" type="password" class="form-control">
-                                <label for="pass" class="form-label d-block w-100">Repeat Password</label>
-                                <span class="togglepass" id="tooglepass3">
-                                    <svg width="25" height="19" viewBox="0 0 25 19" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_560_37674)">
-                                            <path
-                                                d="M24.7273 9.5C24.7273 9.5 20.0909 1 12.3636 1C4.63636 1 0 9.5 0 9.5C0 9.5 4.63636 18 12.3636 18C20.0909 18 24.7273 9.5 24.7273 9.5ZM1.81282 9.5C2.56007 8.36428 3.41954 7.30651 4.37827 6.34264C6.36727 4.35054 9.08727 2.54545 12.3636 2.54545C15.64 2.54545 18.3585 4.35054 20.3505 6.34264C21.3093 7.30651 22.1687 8.36428 22.916 9.5C22.8264 9.63445 22.7275 9.78282 22.6146 9.94509C22.0969 10.6869 21.3319 11.676 20.3505 12.6574C18.3585 14.6495 15.6385 16.4545 12.3636 16.4545C9.08727 16.4545 6.36882 14.6495 4.37673 12.6574C3.418 11.6935 2.55853 10.6357 1.81127 9.5H1.81282Z"
-                                                fill="#000"></path>
-                                            <path
-                                                d="M12.3632 5.63637C11.3385 5.63637 10.3558 6.04343 9.63119 6.768C8.90662 7.49257 8.49956 8.4753 8.49956 9.5C8.49956 10.5247 8.90662 11.5074 9.63119 12.232C10.3558 12.9566 11.3385 13.3636 12.3632 13.3636C13.3879 13.3636 14.3706 12.9566 15.0952 12.232C15.8198 11.5074 16.2268 10.5247 16.2268 9.5C16.2268 8.4753 15.8198 7.49257 15.0952 6.768C14.3706 6.04343 13.3879 5.63637 12.3632 5.63637ZM6.9541 9.5C6.9541 8.06542 7.52399 6.6896 8.53839 5.6752C9.55279 4.6608 10.9286 4.09091 12.3632 4.09091C13.7978 4.09091 15.1736 4.6608 16.188 5.6752C17.2024 6.6896 17.7723 8.06542 17.7723 9.5C17.7723 10.9346 17.2024 12.3104 16.188 13.3248C15.1736 14.3392 13.7978 14.9091 12.3632 14.9091C10.9286 14.9091 9.55279 14.3392 8.53839 13.3248C7.52399 12.3104 6.9541 10.9346 6.9541 9.5Z"
-                                                fill="#000"></path>
-                                            <path d="M2 18.5L24 0" stroke="#000" stroke-width="1.5"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_560_37674">
-                                                <rect width="24.7273" height="18.5" fill="white"></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <div class="resetpass d-flex justify-content-between align-items-center">
-                                <a href="#" class="fgpass">Forgot your password?</a>
-                                <a href="#" class="respass">Reset password via email mail</a>
-                            </div>
-
-                            <div class="profilenamesect__bottbtns d-flex justify-content-between">
-                                <a href="#" class="orangebtn white" data-bs-dismiss="modal"
-                                    aria-label="Close">Cancel</a>
-                                <button class="orangebtn">Save</button>
                             </div>
                         </div>
                     </div>
+
+
+
+
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
-</div>
-</div>
+
+    <!-- logout -->
+
+    <div class="modal fade littmodal" id="logoutmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="littmodal__content text-center">
+                    <button type="button" class="closemodal" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <img class="littmodal__mainpic" src="img/exit.svg" alt="img">
+                    <p class="title">Log out?</p>
+                    <p class="descr">
+                        Do you want to log out?
+                    </p>
+                    <div class="littmodal__btns d-flex align-items-center justify-content-between">
+                        <a href="#" class="orangebtn white" data-bs-dismiss="modal">Cancel</a>
+                        <a href="#" class="orangebtn">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications -->
+
+    <div class="notofication-wrapper">
+        <div class="notofication align-items-center">
+            <div class="notofication__img">
+                <img src="img/warning.svg" alt="warning">
+            </div>
+            <div class="notofication__text">oh-oh-oh problem...</div>
+            <button class="notofication__close">
+                <img src="img/close-modal.svg" alt="close">
+            </button>
+        </div>
+        <div class="notofication align-items-center">
+            <div class="notofication__img">
+                <img src="img/gj.svg" alt="Good Job">
+            </div>
+            <div class="notofication__text">Good job!</div>
+            <button class="notofication__close">
+                <img src="img/close-modal.svg" alt="close">
+            </button>
+        </div>
+        <div class="notofication notofication__big align-items-center">
+            <div class="notofication__img">
+                <div class="avapic">
+                    ia
+                </div>
+            </div>
+            <div class="notofication__text">
+                <p class="notofication__name">Irina Artemovich</p>
+                <p class="notofication__descr">Hi, friends have a job</p>
+            </div>
+            <button class="notofication__close">
+                <img src="img/close-modal.svg" alt="close">
+            </button>
+        </div>
+    </div>
+
+
+
 
 
     <script src="js/lib/jquery.js"></script>

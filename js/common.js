@@ -358,5 +358,13 @@ $(document).ready(function () {
 
 
 
+    // Hide notifications
+
+    $('.notofication__close').click(function () {
+        $(this).parent().hide();
+    });
+
+
+
 
 });
