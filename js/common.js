@@ -112,12 +112,13 @@ $(document).ready(function () {
         });
     }
 
-    $('.custom-select.inmodal2').select2({
-        placeholder: "Select a state",
-        minimumResultsForSearch: -1,
-        dropdownParent: $("#taskmodal"),
-    });
-
+    if ($('body *').is('.inmodal2')) {
+        $('.custom-select.inmodal2').select2({
+            placeholder: "Select a state",
+            minimumResultsForSearch: -1,
+            dropdownParent: $("#taskmodal"),
+        });
+    }
 
 
 
@@ -207,13 +208,13 @@ $(document).ready(function () {
         $('.taskmodal__details').toggleClass('hide');
     });
 
-    $('.taskrole__selected').click(function () {
-        $('.taskrole__selected').not($(this)).removeClass('active');
-        $('.taskrole__userlist').not($(this).next('.taskrole__userlist')).hide();
+    // $('.taskrole__selected').click(function () {
+    //     $('.taskrole__selected').not($(this)).removeClass('active');
+    //     $('.taskrole__userlist').not($(this).next('.taskrole__userlist')).hide();
 
-        $(this).toggleClass('active');
-        $(this).next('.taskrole__userlist').toggle();
-    });
+    //     $(this).toggleClass('active');
+    //     $(this).next('.taskrole__userlist').toggle();
+    // });
 
     $(document).click(function (e) {
         let $target = $(e.target);
@@ -222,6 +223,140 @@ $(document).ready(function () {
             $('.taskrole__userlist').hide();
         }
     });
+
+
+    $('.taskrole .taskrole__selected input.name').focus(function () {
+        this.select();
+        $(this).parent().addClass('active');
+        $(this).parent().next('.taskrole__userlist').show();
+    })
+
+
+
+    // this.setSelectionRange(0, this.value.length)
+
+
+
+    // add task
+
+    $('.tasktype__btn').click(function () {
+        $(this).next('.tasktype__list').toggle();
+    });
+
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if (!$target.closest('.dropdown-tasktype').length) {
+            $('.tasktype__list').hide();
+        }
+    });
+
+    $('.tasktype__list li').click(function () {
+        $('.tasktype__list').hide();
+        $('.tasktype__list li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.addtasksect__btn').click(function () {
+        $(this).hide();
+        $(this).next('.addtasksect__field').show();
+    });
+
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if (!$target.closest('.addtasksect').length) {
+            $('.addtasksect__btn').show();
+            $('.addtasksect__field').hide();
+        }
+    });
+
+
+    // // $(".js-example-responsive").select2({
+    // //     width: 'resolve',
+    // //     // minimumResultsForSearch: -1,
+    // //     dropdownParent: $("#taskmodal"),
+    // // });
+
+    // $(".assignee-select").select2({
+    //     dropdownParent: $("#taskmodal"),
+
+    //     templateResult: function (idioma) {
+    //         var $span = $(`<span><i>` + idioma.id + "</i>" + idioma.text + `</span>`).addClass($(data.element).attr("class"));
+    //         return $span;
+    //     },
+    //     templateSelection: function (idioma) {
+    //         var $span = $("<span><i>" + idioma.id + "</i>" + idioma.text + "</span>");
+    //         return $span;
+    //     },
+
+
+    // });
+
+
+
+
+    // // templateResult: function (data, container) {
+    // //     if (data.element) {
+    // //         $(container).addClass($(data.element).attr("class"));
+    // //     }
+    // //     return data.text;
+    // // },
+
+
+
+
+
+
+
+
+    // PROFILE & SETTINGS
+
+
+
+    var secTabEl = document.querySelector('#myTab li:nth-child(2) button');
+    var secTab = new bootstrap.Tab(secTabEl);
+
+    var firstTabEl = document.querySelector('#myTab li:nth-child(1) button');
+    var firstTab = new bootstrap.Tab(firstTabEl);
+
+
+    $('.settings').click(function () {
+        secTab.show()
+    });
+
+    $('.myprofile').click(function () {
+        firstTab.show()
+    });
+
+    // Settings
+    if ($('body *').is('.languageselect')) {
+        $(".languageselect").select2({
+            dropdownParent: $("#profilesett"),
+            minimumResultsForSearch: -1,
+
+            templateResult: function (idioma) {
+                var $span = $("<span><img src='../img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+                return $span;
+            },
+            templateSelection: function (idioma) {
+                var $span = $("<span><img src='../img/" + idioma.id + ".png'/> " + idioma.text + "</span>");
+                return $span;
+            },
+
+        });
+    }
+
+
+
+    if ($('body *').is('.settselect')) {
+        $('.settselect').select2({
+            placeholder: "Select a state",
+            minimumResultsForSearch: -1,
+            dropdownParent: $("#profilesett"),
+        });
+    }
+
+
+
 
 
 });

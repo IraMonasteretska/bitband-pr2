@@ -196,6 +196,22 @@
         font-size: 14px;
         line-height: 130%;
         font-weight: 500;
+
+        i {
+            width: 16px;
+            height: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            background-color: #65ace3;
+            transform: translateY(-2px);
+
+            img {
+                max-width: 10px;
+                max-height: 10px;
+            }
+        }
     }
 
     .taskmodal__title {
@@ -204,6 +220,13 @@
         font-size: 25px;
         line-height: 160%;
         font-weight: 500;
+        outline: none;
+        border-radius: 3px;
+        border: 1px solid transparent;
+
+        &:focus {
+            border: 1px solid rgb(101 172 227);
+        }
     }
 
     .taskmodal__header-select {
@@ -476,6 +499,14 @@
         &.active {
             border: 1px solid #F58220;
         }
+
+        input.name {
+            outline: none;
+            width: 100%;
+            width: calc(100% - 33px);
+            flex: 0 0 calc(100% - 33px);
+            border: none;
+        }
     }
 
     .taskrole__userlist {
@@ -602,6 +633,61 @@
 .closemodal {
     z-index: 11;
 }
+
+// select
+// .taskrole {
+//     .select2-container {
+//         width: 100% !important;
+//     }
+
+//     .select2-selection__arrow {
+//         display: none;
+//     }
+
+//     .select2-container .select2-selection--single {
+//         height: 40px;
+//     }
+
+//     .select2-container--default .select2-selection--single .select2-selection__rendered {
+//         line-height: 40px;
+
+//         i {
+//             font-style: normal;
+//             text-transform: uppercase;
+//             width: 33px;
+//             height: 33px;
+//             border-radius: 50%;
+//             color: #fff;
+//             font-size: 13.16px;
+//             font-weight: 500;
+//             line-height: 33px;
+//         }
+//     }
+
+
+
+// }
+
+// .asorange i {
+//     background: #F58220;
+// }
+
+// .asred i {
+//     background: #FB5C5C;
+// }
+
+// .asblue i {
+//     background: #5CA1FB;
+// }
+
+
+
+
+
+
+
+
+
 
 @media(max-width:1199.8px) {
 
@@ -759,5 +845,561 @@
 
 
 
+}
+
+
+
+// Profile & Settings/
+#profilesett .modal-content {
+    .proffsett__body {
+        max-height: 530px;
+        overflow-y: auto;
+    }
+}
+
+.profilesett {
+    .modal-dialog {
+        max-width: 708px;
+    }
+}
+
+.nav-tabs,
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.nav-link {
+    padding: 0;
+    margin: 0 0 -1px 0 !important;
+}
+
+.proffsett__header {
+    padding: 23px 45px 0 45px;
+    border-bottom: 1px solid #EDEAE9;
+
+    .profilesett__title {
+        margin-bottom: 27px;
+        color: #10284D;
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 500;
+    }
+
+    .nav-item {
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .nav-link {
+        color: rgba(68, 92, 129, 0.57);
+        font-size: 15px;
+        line-height: 160%;
+        font-weight: 500;
+        padding-bottom: 4px;
+        position: relative;
+        transition: 0.3s;
+
+        &:hover {
+            color: #445C81;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: #F58220;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        &.active {
+            color: #F58220;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+
+
+
+
+}
+
+.proffsett__body {
+    padding: 30px 45px 35px 45px;
+}
+
+.profilenamesect {
+    margin-bottom: 40px;
+}
+
+.profilenamesect__photo {
+    width: 100%;
+    max-width: 69px;
+    flex: 0 0 69px;
+
+    input {
+        display: none;
+    }
+
+    label {
+        width: 69px;
+        height: 69px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        display: block;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+}
+
+.profilenamesect__name {
+    width: 100%;
+    max-width: calc(100% - 69px);
+    flex: 0 0 calc(100% - 69px);
+    padding-left: 20px;
+
+    .fl-name {
+        color: #10284D;
+        font-size: 18px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+
+    .subtitle {
+        color: #647CA1;
+        font-size: 12px;
+        line-height: 160%;
+    }
+}
+
+.profilenamesect__inputssect {
+    flex-wrap: wrap;
+
+    .inputfield {
+        width: 100%;
+        max-width: calc(50% - 30px);
+        flex: 0 0 calc(50% - 30px);
+
+        label {
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+        input {
+            height: 39px;
+            padding-left: 15px;
+            font-size: 13px;
+        }
+
+        &.fullwidth {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+}
+
+.inputfield.reverse textarea {
+    order: 2;
+    height: 84px;
+    outline: none;
+    border-radius: 17px;
+    border: 2px solid #DBDCE2;
+    transition: 0.3s;
+    padding-left: 15px;
+    font-size: 13px;
+    line-height: 160%;
+    color: #000;
+    resize: none;
+    width: 100%;
+    padding-top: 5px;
+
+    &:focus {
+        border-color: #F58220;
+
+        &+label {
+            color: #F58220;
+        }
+    }
+}
+
+.profilenamesect__bottbtns {
+    button.orangebtn {
+        border: none;
+        margin-left: 15px;
+    }
+
+    .orangebtn {
+        width: 143px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .orangebtn.white {
+        border-width: 1px;
+    }
+}
+
+
+// settings
+
+.settrow {
+    margin-bottom: 30px;
+
+    .title {
+        margin-bottom: 20px;
+        color: #10284D;
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        max-width: 278px;
+        flex: 0 0 278px;
+        height: 40px;
+        border: 1.31453px solid #C3C6D5;
+        border-radius: 34.8351px;
+        font-size: 12px;
+        padding-left: 15px;
+        outline: none;
+    }
+
+    .descr {
+        color: #445C81;
+        font-size: 13px;
+        line-height: 160%;
+        margin-bottom: 15px;
+    }
+}
+
+.notifselect {
+    .select2-selection__rendered {
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url('../img/notif1.svg') no-repeat center / 100%;
+            margin-right: 5px;
+            vertical-align: middle;
+            margin-top: -4px;
+        }
+    }
+
+    .select2-container--default.select2-container--open {
+        .select2-selection__rendered {
+            &::before {
+                background: url('../img/notif2.svg') no-repeat center / 100%;
+            }
+        }
+    }
+}
+
+.modal#profilesett .select2-results__option--selectable {
+    padding-left: 34px;
+}
+
+.settlabel,
+.inputfield .settlabel {
+    margin-bottom: 7px;
+    color: #445C81;
+    font-size: 13px;
+    line-height: 160%;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+
+.dontnotif {
+    input {
+        width: 100%;
+        max-width: 104px;
+        flex: 0 0 104px;
+        height: 40px;
+        border: 1.31453px solid #C3C6D5;
+        border-radius: 34.8351px;
+        font-size: 12px;
+        padding-left: 15px;
+        outline: none;
+
+        &:focus {
+            border-color: #F58220;
+        }
+
+        &::placeholder {
+            color: #AAABB1;
+        }
+    }
+
+    span {
+        width: 100%;
+        max-width: calc(100% - 208px);
+        flex: 0 0 calc(100% - 208px);
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        color: rgba(68, 92, 129, 0.57);
+        font-size: 15px;
+    }
+}
+
+.settcheckfield {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    input {
+        display: none;
+
+        &:checked {
+            &+label {
+                &::before {
+                    background-color: #F58220;
+                    border: 1px solid #F58220;
+                }
+            }
+        }
+    }
+
+    label {
+        cursor: pointer;
+        color: #445C81;
+        font-size: 13px;
+        line-height: 160%;
+        position: relative;
+        padding-left: 23px;
+
+        b {
+            font-weight: 500;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-image: url('../img/settcheckbox.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 9px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            border: 1px solid #C3C6D5;
+            border-radius: 2px;
+        }
+    }
+}
+
+// change password
+
+.settchangepass {
+    max-width: 346px;
+    margin: 0 auto;
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #10284D;
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+
+    .inputfield {
+        label {
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
+
+        input {
+            height: 40px;
+            font-size: 13px;
+            padding-left: 15px;
+            border-width: 1.3px;
+        }
+
+        .togglepass {
+            right: 15px;
+            bottom: 9px;
+        }
+    }
+}
+
+.resetpass {
+    margin-bottom: 25px;
+
+    a {
+        font-size: 12px;
+        line-height: 160%;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .fgpass {
+        color: #10284D;
+    }
+
+    .respass {
+        color: #F58220;
+    }
+}
+
+
+
+@media(max-width:991.8px) {
+
+    .profilesett .modal-dialog {
+        max-width: 600px;
+    }
+
+    .profilenamesect__inputssect .inputfield {
+        max-width: calc(50% - 15px);
+        flex: 0 0 calc(50% - 15px);
+    }
+
+    .profilenamesect {
+        margin-bottom: 20px;
+    }
+
+    .settrow .title {
+        margin-bottom: 10px;
+    }
+
+    .settrow {
+        margin-bottom: 20px;
+    }
+
+    .settrow .notifselect .select2-container {
+        width: 100% !important;
+    }
+
+
+
+
+
+
+}
+
+@media(max-width:767.8px) {
+    .profilesett .modal-dialog {
+        max-width: 500px;
+    }
+
+    .proffsett__header {
+        padding: 23px 25px 0 25px;
+    }
+
+    #profilesett .modal-content .proffsett__body {
+        padding: 30px 25px 35px 25px;
+    }
+
+    .notifselect {
+        margin-bottom: 15px;
+    }
+
+    .dontnotif {
+        max-width: 300px;
+    }
+
+
+}
+
+@media(max-width:575.8px) {
+    .profilesett .modal-dialog {
+        max-width: 400px;
+        width: calc(100% - 30px);
+    }
+
+    .proffsett__header .profilesett__title {
+        font-size: 18px;
+    }
+
+    .proffsett__header {
+        padding: 25px 15px 0 15px;
+    }
+
+    .proffsett__header .nav-link {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .profilenamesect__photo {
+        max-width: 55px;
+        flex: 0 0 55px;
+    }
+
+    .profilenamesect__photo label {
+        width: 55px;
+        height: 55px;
+    }
+
+    .profilenamesect__inputssect .inputfield {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .profilenamesect__inputssect .inputfield label {
+        margin-bottom: 5px;
+    }
+
+    .inputfield {
+        margin-bottom: 15px;
+    }
+
+    .settrow .select2-container {
+        width: 100% !important;
+    }
+
+    .modal#profilesett .select2-results__option--selectable {
+        padding-left: 14px;
+    }
+
+    .resetpass {
+        flex-wrap: wrap;
+
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    #profilesett .modal-content .proffsett__body {
+        padding: 30px 15px 35px 15px;
+    }
+
+    .settrow input {
+        max-width: 100%;
+    }
 
 }

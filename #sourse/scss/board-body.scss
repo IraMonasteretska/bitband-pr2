@@ -91,6 +91,21 @@
             font-size: 11px;
             line-height: 130%;
             font-weight: 500;
+
+            i {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 14px;
+                height: 14px;
+                border-radius: 3px;
+                background-color: #65ace3;
+
+                img {
+                    max-width: 10px;
+                    max-height: 10px;
+                }
+            }
         }
 
         .usercircle {
@@ -131,18 +146,133 @@
 .addtasksect__btn {
     padding-top: 16px;
 
-    a {
+    label {
         text-decoration: none;
         color: #445C81;
         font-size: 14px;
         line-height: 160%;
         font-weight: 500;
+        cursor: pointer;
 
         img {
             margin: -3px 10px 0 0;
         }
     }
 }
+
+.addtasksect__field {
+    display: none;
+
+    textarea {
+        width: 100%;
+        resize: none;
+        border: 1px solid #dfdfdf;
+        outline: none;
+        border-radius: 5px;
+        height: 80px;
+        padding: 10px;
+        font-size: 14px;
+
+        &:focus {
+            border: 1px solid #5CA1FB;
+        }
+    }
+
+    .dropdown-tasktype {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+
+
+        .tasktype__btn {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            background: #fff;
+            padding: 3px;
+            border-radius: 3px;
+            transition: 0.3s;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            width: 40px;
+
+            &:hover {
+                background: #e1e1e1;
+            }
+
+            span {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 14px;
+                height: 14px;
+                border-radius: 3px;
+                background-color: #65ace3;
+
+                img {
+                    max-width: 10px;
+                    max-height: 10px;
+                }
+            }
+
+            svg {
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        .tasktype__list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background: #fff;
+            width: 120px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #d2d2d2;
+            display: none;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    font-size: 13px;
+                    line-height: 160%;
+                    color: #081B40;
+                    padding: 4px 10px;
+                    transition: 0.3s;
+                    display: block;
+                }
+
+                &.active {
+                    a {
+                        background: #F4F5F7;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 253858
 
 // remove column 
 .boardcolumn__dotsmenu {
