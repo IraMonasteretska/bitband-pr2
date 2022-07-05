@@ -259,6 +259,8 @@ $(document).ready(function () {
     $('.addtasksect__btn').click(function () {
         $(this).hide();
         $(this).next('.addtasksect__field').show();
+        $('.addtasksect__field').not($(this).next('.addtasksect__field')).hide();
+        $('.addtasksect__btn').not($(this)).show();
     });
 
     $(document).click(function (e) {
@@ -363,6 +365,77 @@ $(document).ready(function () {
     $('.notofication__close').click(function () {
         $(this).parent().hide();
     });
+
+
+    // TEST DaD
+
+
+
+
+
+    // new Sortable(test1, {
+    //     group: 'shared', // set both lists to same group
+    //     animation: 150,
+    //     scroll: true,
+    //     scrollSensitivity: 30,
+    //     scrollSpeed: 10,
+    //     ghostClass: "sortable-ghost",
+    //     dragClass: "sortable-drag",
+
+    // });
+
+    // new Sortable(test2, {
+    //     group: 'shared',
+    //     animation: 150,
+    //     scroll: true,
+    //     scrollSensitivity: 30,
+    //     scrollSpeed: 10,
+    //     ghostClass: "sortable-ghost",
+    //     dragClass: "sortable-drag",
+    // });
+
+    // new Sortable(test3, {
+    //     group: 'shared',
+    //     animation: 150,
+    //     scroll: true,
+    //     scrollSensitivity: 30,
+    //     scrollSpeed: 10,
+    //     ghostClass: "sortable-ghost",
+    //     dragClass: "sortable-drag",
+    // });
+
+
+
+
+
+
+
+
+    var el = $('.taskswrapper');
+    $(el).each(function (i, e) {
+        var sortable = Sortable.create(e, {
+            group: 'shared',
+            animation: 150,
+            scroll: true,
+            scrollSensitivity: 30,
+            scrollSpeed: 10,
+            ghostClass: "sortable-ghost",
+            dragClass: "sortable-drag",
+            emptyInsertThreshold: 60
+        });
+    });
+
+
+
+    // executor
+    $('.exetutor').click(function () {
+        $(this).toggleClass('open');
+        $(this).parent().next('.boardprbody__row').toggleClass('hide');
+    })
+
+
+
+
 
 
 

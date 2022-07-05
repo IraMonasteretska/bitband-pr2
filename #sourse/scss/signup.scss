@@ -107,6 +107,7 @@
 
             &+label+.togglepass {
                 opacity: 1;
+
                 &>svg {
                     path {
                         fill: #F58220;
@@ -146,6 +147,7 @@
 
         &:hover {
             opacity: 1;
+
             svg {
                 path {
                     fill: #F58220;
@@ -216,6 +218,13 @@
                 transition: 0.3s;
             }
 
+            a {
+                transition: 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
         }
     }
 }
@@ -505,8 +514,10 @@
         max-width: 100%;
         flex: 0 0 100%;
     }
+
     .remembersect {
         margin-bottom: 20px;
+
         .remembersect__remember {
             margin-bottom: 10px;
         }

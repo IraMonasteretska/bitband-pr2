@@ -65,13 +65,16 @@
                 text-decoration: none;
                 font-size: 18px;
                 line-height: 160%;
-                // pointer-events: none;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #10284C;
+                }
             }
 
             &.active {
                 a {
                     color: #10284C;
-                    // pointer-events: all;
                 }
             }
         }
