@@ -259,15 +259,15 @@ $(document).ready(function () {
     $('.addtasksect__btn').click(function () {
         $(this).hide();
         $(this).next('.addtasksect__field').show();
-        $('.addtasksect__field').not($(this).next('.addtasksect__field')).hide();
+        $('.addtasksect .addtasksect__field').not($(this).next('.addtasksect__field')).hide();
         $('.addtasksect__btn').not($(this)).show();
     });
 
     $(document).click(function (e) {
         let $target = $(e.target);
         if (!$target.closest('.addtasksect').length) {
-            $('.addtasksect__btn').show();
-            $('.addtasksect__field').hide();
+            $('.addtasksect .addtasksect__btn').show();
+            $('.addtasksect .addtasksect__field').hide();
         }
     });
 
@@ -369,48 +369,6 @@ $(document).ready(function () {
 
     // TEST DaD
 
-
-
-
-
-    // new Sortable(test1, {
-    //     group: 'shared', // set both lists to same group
-    //     animation: 150,
-    //     scroll: true,
-    //     scrollSensitivity: 30,
-    //     scrollSpeed: 10,
-    //     ghostClass: "sortable-ghost",
-    //     dragClass: "sortable-drag",
-
-    // });
-
-    // new Sortable(test2, {
-    //     group: 'shared',
-    //     animation: 150,
-    //     scroll: true,
-    //     scrollSensitivity: 30,
-    //     scrollSpeed: 10,
-    //     ghostClass: "sortable-ghost",
-    //     dragClass: "sortable-drag",
-    // });
-
-    // new Sortable(test3, {
-    //     group: 'shared',
-    //     animation: 150,
-    //     scroll: true,
-    //     scrollSensitivity: 30,
-    //     scrollSpeed: 10,
-    //     ghostClass: "sortable-ghost",
-    //     dragClass: "sortable-drag",
-    // });
-
-
-
-
-
-
-
-
     var el = $('.taskswrapper');
     $(el).each(function (i, e) {
         var sortable = Sortable.create(e, {
@@ -425,6 +383,27 @@ $(document).ready(function () {
         });
     });
 
+    var el1 = $('.boardprbody.general');
+    $(el1).each(function (i, e) {
+        var sortable = Sortable.create(e, {
+            group: 'sharedcol',
+            animation: 150,
+            scroll: true,
+            scrollSensitivity: 30,
+            scrollSpeed: 10,
+            ghostClass: "sortable-ghost",
+            dragClass: "sortable-drag",
+            emptyInsertThreshold: 60
+        });
+    });
+
+
+
+
+
+
+
+
 
 
     // executor
@@ -434,9 +413,19 @@ $(document).ready(function () {
     })
 
 
+    // add task - top block
+    $('.headaddtask').click(function () {
+        $(this).parents('.boardcolumn__title').next('.taskswrapper').find('.addtasksect__field').slideToggle();
 
 
+    });
 
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if (!$target.closest('.headaddtask').length && !$target.closest('.addtasksect__field-top').length) {
+            $('.addtasksect__field-top').slideUp();
+        }
+    });
 
 
 

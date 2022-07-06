@@ -56,7 +56,7 @@
 
     p {
         margin: 0;
-        padding-right: 30px;
+        padding-right: 40px;
     }
 }
 
@@ -69,6 +69,12 @@
     justify-content: space-between;
     margin-bottom: 9px;
     cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 0 4px 10px #cdcdcd;
+        background: #f8f8f8;
+    }
 
     p {
         font-size: 13px;
@@ -508,14 +514,82 @@
 
 // ------
 
+.addtasksect__field .dropdown ul li a:active {
+    background-color: #e9ecef;
+}
 
+.addtasksect__field .dropdown ul li a {
+    position: relative;
+    padding-left: 24px;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: #65ace3;
+        border-radius: 3px;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../img/checkwhite.png');
+        background-repeat: no-repeat;
+        background-size: 9px;
+        background-position: center;
+    }
+}
 
+.addtasksect__btn label img {
+    width: 14px;
+}
 
+.addtasksect__btn {
+    opacity: 0;
+    transition: 0.3s;
+}
 
+.boardcolumn:hover {
+    .addtasksect__btn {
+        opacity: 1;
+    }
+}
 
+.headaddtask {
+    position: absolute;
+    right: 30px;
+    top: -1px;
+    opacity: 0;
+    transition: 0.3s;
 
+    .headaddtask__btn {
+        cursor: pointer;
+        img {
+            width: 14px;
+        }
+    }
+}
 
+.boardcolumn__title:hover {
+    .headaddtask {
+        opacity: 1;
+    }
+}
 
+.taskswrapper {
+  .addtasksect__field {
+        display: block;
+    }
+}
+
+.taskswrapper .addtasksect__field.addtasksect__field-top {
+    display: none;
+}
+
+.boardcolumn:hover {
+    .boardcolumn__dotsmenu, .headaddtask {
+        opacity: 1;
+    }
+}
 
 
 
@@ -531,6 +605,12 @@
     .boardcolumn__dotsmenu {
         opacity: 1;
     }
+
+    .addtasksect__btn,
+    .headaddtask {
+        opacity: 1;
+    }
+
 }
 
 @media(max-width:991.8px) {

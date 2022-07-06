@@ -428,12 +428,14 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    right: -15px;
+    right: 352px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
+    transform: rotate(-180deg);
 
     &.rotate {
-        transform: rotate(-180deg);
+        transform: rotate(0);
+        right: 0;
     }
 }
 
@@ -740,6 +742,10 @@
         width: 260px;
     }
 
+    .toggleopentask {
+        right: 290px;
+    }
+
 }
 
 @media(max-width:991.8px) {
@@ -781,7 +787,9 @@
         padding: 0;
     }
 
-
+    .toggleopentask {
+        right: 210px;
+    }
 
 
 
