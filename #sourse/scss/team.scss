@@ -189,7 +189,7 @@
             font-size: 15px;
             line-height: 140%;
             font-weight: 500;
-            width: 33%;
+            width: 25%;
 
             .circle {
                 margin-right: 11px;
@@ -238,7 +238,14 @@
             color: #10284D;
             font-size: 14px;
             line-height: 160%;
-            width: calc(67% - 325px);
+            width: calc(53% - 325px);
+        }
+
+        .team__status {
+            width: 22%;
+            font-size: 14px;
+            line-height: 160%;
+            color: #10284D;
         }
 
         .team__role {
@@ -260,13 +267,6 @@
 .sortbyname {
     cursor: pointer;
 }
-
-
-
-
-
-
-
 
 @media(max-width:1400.8px) {
     .table-wrapper {
@@ -365,7 +365,7 @@
     }
 
     .table-wrapper table {
-        width: 700px;
+        width: 800px;
     }
 
     table .genselect .select2-container {

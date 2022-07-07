@@ -73,8 +73,6 @@
     background: #F3F4F8;
 }
 
-
-
 // add people modal
 
 .modalform {
@@ -185,13 +183,6 @@ table {
 
 }
 
-
-
-
-
-
-
-
 @media(max-width:1400.8px) {
     .select2-results__option--selectable {
         padding: 5px 8px 5px 15px;
@@ -206,12 +197,7 @@ table {
     .boardprheader__sort .select2-container {
         max-width: 100%;
     }
-
-
 }
-
-
-
 
 .settrow {
 
@@ -233,8 +219,6 @@ table {
         transform: rotate(180deg);
         background: url('../img/select-arrtop.svg') no-repeat center;
     }
-
-    
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
         line-height: 40px;
@@ -275,9 +259,5 @@ table {
         left: initial;
         background: url(../img/select-arrow.svg) no-repeat center;
     }
-
-    // ---
-    
-
 
 }

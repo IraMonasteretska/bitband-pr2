@@ -68,7 +68,6 @@
     }
 }
 
-
 // form
 .addpeople {
     .addpeople__content {
@@ -112,14 +111,6 @@
     }
 }
 
-
-
-
-
-
-
-
-
 @media(max-width:575.8px) {
     .deletemodal .modal-dialog {
         margin: 0.5rem auto;
@@ -148,7 +139,6 @@
         max-width: 125px;
     }
 
-    // add people
     .addpeople .modal-dialog {
         margin: 0.5rem auto;
         max-width: 300px;
@@ -165,13 +155,7 @@
     .modalform .inputfield {
         margin-bottom: 15px;
     }
-
-
-
 }
-
-
-
 
 // TASK MODAL
 
@@ -256,8 +240,6 @@
         line-height: 160%;
         font-weight: 500;
     }
-
-
 }
 
 .adddescrtextfield {
@@ -376,7 +358,6 @@
             }
         }
     }
-
 }
 
 .openteskcontent__commenttextfield {
@@ -594,7 +575,6 @@
                     .name {
                         color: #7B879B;
                         transition: 0.3s;
-
                     }
 
                     &:hover {
@@ -646,61 +626,6 @@
 .closemodal {
     z-index: 11;
 }
-
-// select
-// .taskrole {
-//     .select2-container {
-//         width: 100% !important;
-//     }
-
-//     .select2-selection__arrow {
-//         display: none;
-//     }
-
-//     .select2-container .select2-selection--single {
-//         height: 40px;
-//     }
-
-//     .select2-container--default .select2-selection--single .select2-selection__rendered {
-//         line-height: 40px;
-
-//         i {
-//             font-style: normal;
-//             text-transform: uppercase;
-//             width: 33px;
-//             height: 33px;
-//             border-radius: 50%;
-//             color: #fff;
-//             font-size: 13.16px;
-//             font-weight: 500;
-//             line-height: 33px;
-//         }
-//     }
-
-
-
-// }
-
-// .asorange i {
-//     background: #F58220;
-// }
-
-// .asred i {
-//     background: #FB5C5C;
-// }
-
-// .asblue i {
-//     background: #5CA1FB;
-// }
-
-
-
-
-
-
-
-
-
 
 @media(max-width:1199.8px) {
 
@@ -791,9 +716,6 @@
         right: 210px;
     }
 
-
-
-
 }
 
 @media(max-width:767.8px) {
@@ -831,12 +753,6 @@
     .taskmodal__content {
         border: none;
     }
-
-
-
-
-
-
 }
 
 @media(max-width:575.8px) {
@@ -865,8 +781,6 @@
 
 
 }
-
-
 
 // Profile & Settings/
 #profilesett .modal-content {
@@ -951,8 +865,6 @@
                 width: 100%;
             }
         }
-
-
     }
 
 
@@ -1294,8 +1206,6 @@
     }
 }
 
-
-
 @media(max-width:991.8px) {
 
     .profilesett .modal-dialog {
@@ -1323,11 +1233,6 @@
         width: 100% !important;
     }
 
-
-
-
-
-
 }
 
 @media(max-width:767.8px) {
@@ -1350,7 +1255,6 @@
     .dontnotif {
         max-width: 300px;
     }
-
 
 }
 
@@ -1452,8 +1356,5 @@
     .littmodal__btns a.orangebtn {
         max-width: 125px;
     }
-
-
-
 
 }

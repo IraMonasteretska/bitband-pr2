@@ -396,10 +396,6 @@
     }
 }
 
-
-
-
-
 // EXECUTOR
 
 .boardprbody.boardprbody__executor {
@@ -591,10 +587,13 @@
     }
 }
 
+.sortable-ghost {
+    background: #ddf2ff;
+}
 
-
-
-
+.sortable-drag {
+    background: #ddf2ff;
+}
 
 
 @media(max-width:1199.8px) {
@@ -610,7 +609,6 @@
     .headaddtask {
         opacity: 1;
     }
-
 }
 
 @media(max-width:991.8px) {
@@ -651,8 +649,6 @@
         left: 20px;
         width: calc(100% - 40px);
     }
-
-
 }
 
 @media(max-width:360.8px) {
@@ -666,55 +662,6 @@
     }
 }
 
-
-
-
-
-
-
-
-// test
-.sortable-ghost {
-    background: #ddf2ff;
-}
-
-.sortable-drag {
-    background: #ddf2ff;
-}
-
-
-
-
-
-// .boardcolumn {
-//     position: relative;
-//     padding-bottom: 100px;
-// }
-// .boardcolumn__topsect {
-//     height: 100%;
-   
-// }
-
-// .addtasksect {
-//     height: 50px;
-// }
-
-// .boardcolumn__topsect {
-//    height: calc(100% - 50px);
-// }
-
-// .boardcolumn {
-//     overflow: initial;
-// }
-
-// .boardprbody {
-//     height: auto;
-//     min-height: calc(100vh - 120px);;
-// }
-
-// .taskswrapper  {
-//     height: 100%;
-// }
 
 .taskswrapper  {
     min-height: calc(100vh - 400px);

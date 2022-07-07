@@ -19,6 +19,7 @@
 .letsgetstarted__content {
     z-index: 2;
     position: relative;
+
     img {
         max-width: 760px;
         width: 100%;
@@ -53,9 +54,6 @@
     }
 }
 
-
-
-
 @media(max-width:1600.8px) {
     .letsgetstarted__content {
         img {
@@ -77,13 +75,10 @@
             }
         }
     }
-
-
-
 }
 
 @media(max-width:991.8px) {
-    .letsgetstarted  {
+    .letsgetstarted {
         min-height: 650px;
     }
 }

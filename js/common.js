@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // SIGN UP - visibility password
 
-
     $('.togglepass').click(function () {
         if ($(this).parent().find('input').attr('type') == "password") {
             $(this).parent().find('input').attr("type", "text");
@@ -22,12 +21,14 @@ $(document).ready(function () {
 
 
     // selects
+
     if ($('body *').is('select')) {
         $('.custom-select').select2({
             placeholder: "Select a state",
             minimumResultsForSearch: -1,
         });
     }
+
 
     // sidebar project settmenu
     $('.projectsgroup__projbox .botsbtn').click(function () {
@@ -42,7 +43,9 @@ $(document).ready(function () {
         }
     });
 
+
     // rename project
+
     $('.renamebtn').click(function (e) {
         e.preventDefault();
         $(this).parents('.projectsgroup__listwrapper').find('.projrenamesect').addClass('show');
@@ -56,7 +59,9 @@ $(document).ready(function () {
         }
     });
 
+
     // user menu (settings/logout..)
+
     $('.profilebox__avatar').click(function () {
         $('.profilebox__list').toggleClass('show');
     });
@@ -68,7 +73,9 @@ $(document).ready(function () {
         }
     });
 
+
     // project ava color
+
     $('.imgbox').click(function () {
         $('.projcolors').not($(this).parents('.projectsgroup__listwrapper').find('.projcolors')).removeClass('show');
         $(this).parents('.projectsgroup__listwrapper').find('.projcolors').toggleClass('show');
@@ -87,7 +94,9 @@ $(document).ready(function () {
         }
     });
 
+
     // open project popup
+
     $('.sidebarprojbox').click(function () {
         $(this).find('.projinfo__btn').toggleClass('rotate');
         $(this).parent().next('.projectsgroup').toggleClass('show');
@@ -101,8 +110,8 @@ $(document).ready(function () {
         }
     });
 
-    // select in modal
 
+    // select in modal
 
     if ($('body *').is('select')) {
         $('.custom-select.inmodal').select2({
@@ -119,8 +128,6 @@ $(document).ready(function () {
             dropdownParent: $("#taskmodal"),
         });
     }
-
-
 
 
     // team - role btn
@@ -208,14 +215,6 @@ $(document).ready(function () {
         $('.taskmodal__details').toggleClass('hide');
     });
 
-    // $('.taskrole__selected').click(function () {
-    //     $('.taskrole__selected').not($(this)).removeClass('active');
-    //     $('.taskrole__userlist').not($(this).next('.taskrole__userlist')).hide();
-
-    //     $(this).toggleClass('active');
-    //     $(this).next('.taskrole__userlist').toggle();
-    // });
-
     $(document).click(function (e) {
         let $target = $(e.target);
         if (!$target.closest('.taskrole').length) {
@@ -224,17 +223,11 @@ $(document).ready(function () {
         }
     });
 
-
     $('.taskrole .taskrole__selected input.name').focus(function () {
         this.select();
         $(this).parent().addClass('active');
         $(this).parent().next('.taskrole__userlist').show();
     })
-
-
-
-    // this.setSelectionRange(0, this.value.length)
-
 
 
     // add task
@@ -272,47 +265,7 @@ $(document).ready(function () {
     });
 
 
-    // // $(".js-example-responsive").select2({
-    // //     width: 'resolve',
-    // //     // minimumResultsForSearch: -1,
-    // //     dropdownParent: $("#taskmodal"),
-    // // });
-
-    // $(".assignee-select").select2({
-    //     dropdownParent: $("#taskmodal"),
-
-    //     templateResult: function (idioma) {
-    //         var $span = $(`<span><i>` + idioma.id + "</i>" + idioma.text + `</span>`).addClass($(data.element).attr("class"));
-    //         return $span;
-    //     },
-    //     templateSelection: function (idioma) {
-    //         var $span = $("<span><i>" + idioma.id + "</i>" + idioma.text + "</span>");
-    //         return $span;
-    //     },
-
-
-    // });
-
-
-
-
-    // // templateResult: function (data, container) {
-    // //     if (data.element) {
-    // //         $(container).addClass($(data.element).attr("class"));
-    // //     }
-    // //     return data.text;
-    // // },
-
-
-
-
-
-
-
-
     // PROFILE & SETTINGS
-
-
 
     var secTabEl = document.querySelector('#myTab li:nth-child(2) button');
     var secTab = new bootstrap.Tab(secTabEl);
@@ -329,7 +282,9 @@ $(document).ready(function () {
         firstTab.show()
     });
 
+
     // Settings
+
     if ($('body *').is('.languageselect')) {
         $(".languageselect").select2({
             dropdownParent: $("#profilesett"),
@@ -347,8 +302,6 @@ $(document).ready(function () {
         });
     }
 
-
-
     if ($('body *').is('.settselect')) {
         $('.settselect').select2({
             placeholder: "Select a state",
@@ -356,8 +309,6 @@ $(document).ready(function () {
             dropdownParent: $("#profilesett"),
         });
     }
-
-
 
 
     // Hide notifications
@@ -398,15 +349,8 @@ $(document).ready(function () {
     });
 
 
-
-
-
-
-
-
-
-
     // executor
+
     $('.exetutor').click(function () {
         $(this).toggleClass('open');
         $(this).parent().next('.boardprbody__row').toggleClass('hide');
@@ -414,10 +358,9 @@ $(document).ready(function () {
 
 
     // add task - top block
+
     $('.headaddtask').click(function () {
         $(this).parents('.boardcolumn__title').next('.taskswrapper').find('.addtasksect__field').slideToggle();
-
-
     });
 
     $(document).click(function (e) {
@@ -426,7 +369,5 @@ $(document).ready(function () {
             $('.addtasksect__field-top').slideUp();
         }
     });
-
-
 
 });
