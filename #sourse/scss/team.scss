@@ -261,9 +261,48 @@
     cursor: pointer;
 }
 
+.table-wrapper tbody .team__name .name {
 
+    i,
+    a {
+        font-size: 13px;
+        display: block;
+        font-weight: 400;
+        opacity: 0.7;
+        text-decoration: none;
+        color: #10284D;
+    }
+}
 
+.boardcolumn__dotsmenu.boardcolumn__dotsmenu-team {
+    display: inline-block;
+    position: relative;
+    opacity: 1;
+    
 
+    .boardcolumn__list {
+        text-align: left;
+        width: 170px;
+        z-index: 13;
+
+        ul li {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: #2C4469;
+                font-size: 14px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -375,5 +414,18 @@
 
     .boardprbody.boardprbody__team {
         height: calc(100vh - 198px);
+    }
+
+    .table-wrapper tbody .team__name {
+        width: 40%;
+    }
+
+    .table-wrapper tbody .team__role {
+        width: 235px;
+        padding-right: 20px !important;
+    }
+
+    .table-wrapper tbody .team__email {
+        width: calc(60% - 235px);
     }
 }

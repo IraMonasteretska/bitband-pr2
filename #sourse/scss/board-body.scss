@@ -411,7 +411,7 @@
     }
 
     .boardprbody__row {
-        width: 100%;
+        width: 90%;
         margin-bottom: 25px;
 
         &.hide {
@@ -593,6 +593,14 @@
 
 .sortable-drag {
     background: #ddf2ff;
+}
+
+.addtasksect__field .dropdown ul li a:active {
+    background-color: #0d6efd;
+}
+
+.addtasksect__field .dropdown ul li a.bug:before {
+    background-color: #FB5C5C;
 }
 
 
