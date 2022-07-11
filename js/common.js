@@ -320,6 +320,22 @@ $(document).ready(function () {
 
     // TEST DaD
 
+    if ($(window).width() > 991) {
+        var el1 = $('.boardprbody.general');
+        $(el1).each(function (i, e) {
+            var sortable = Sortable.create(e, {
+                group: 'sharedcol',
+                animation: 150,
+                scroll: true,
+                scrollSensitivity: 30,
+                scrollSpeed: 10,
+                ghostClass: "sortable-ghost",
+                dragClass: "sortable-drag",
+                emptyInsertThreshold: 60
+            });
+        });
+    }
+
     var el = $('.taskswrapper');
     $(el).each(function (i, e) {
         var sortable = Sortable.create(e, {
@@ -334,19 +350,7 @@ $(document).ready(function () {
         });
     });
 
-    var el1 = $('.boardprbody.general');
-    $(el1).each(function (i, e) {
-        var sortable = Sortable.create(e, {
-            group: 'sharedcol',
-            animation: 150,
-            scroll: true,
-            scrollSensitivity: 30,
-            scrollSpeed: 10,
-            ghostClass: "sortable-ghost",
-            dragClass: "sortable-drag",
-            emptyInsertThreshold: 60
-        });
-    });
+
 
 
     // executor
@@ -369,5 +373,17 @@ $(document).ready(function () {
             $('.addtasksect__field-top').slideUp();
         }
     });
+
+
+    // move column (board)
+    $('.boardcolumn__list-mob.right').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.boardcolumn').insertAfter($(this).parents('.boardcolumn').next());
+    });
+    $('.boardcolumn__list-mob.left').click(function (e) {
+        e.preventDefault();
+        $(this).parents('.boardcolumn').insertBefore($(this).parents('.boardcolumn').prev());
+    });
+
 
 });

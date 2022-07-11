@@ -603,6 +603,10 @@
     background-color: #FB5C5C;
 }
 
+.boardcolumn__list-mob {
+    display: none;
+}
+
 
 @media(max-width:1199.8px) {
     .boardprbody {
@@ -622,6 +626,18 @@
 @media(max-width:991.8px) {
     .boardprbody {
         height: calc(100vh - 170px);
+    }
+
+    .boardcolumn__list-mob {
+        display: block;
+    }
+
+    .boardcolumn__dotsmenu .boardcolumn__list ul li {
+        margin-bottom: 7px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -673,4 +689,8 @@
 
 .taskswrapper  {
     min-height: calc(100vh - 400px);
+}
+
+.boardcolumn__dotsmenu .boardcolumn__list {
+    display: block !important;
 }
