@@ -249,14 +249,16 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    $('.addtasksect__btn').click(function () {
+
+
+    $('.boardprbody').on('click', '.addtasksect__btn', function () {
         $(this).hide();
         $(this).next('.addtasksect__field').show();
         $('.addtasksect .addtasksect__field').not($(this).next('.addtasksect__field')).hide();
         $('.addtasksect__btn').not($(this)).show();
     });
 
-    $(document).click(function (e) {
+    $(document).on('click', function (e) {
         let $target = $(e.target);
         if (!$target.closest('.addtasksect').length) {
             $('.addtasksect .addtasksect__btn').show();
@@ -363,11 +365,13 @@ $(document).ready(function () {
 
     // add task - top block
 
-    $('.headaddtask').click(function () {
+
+
+    $('.boardprbody').on('click', '.headaddtask', function () {
         $(this).parents('.boardcolumn__title').next('.taskswrapper').find('.addtasksect__field').slideToggle();
     });
 
-    $(document).click(function (e) {
+    $(document).on('click', function (e) {
         let $target = $(e.target);
         if (!$target.closest('.headaddtask').length && !$target.closest('.addtasksect__field-top').length) {
             $('.addtasksect__field-top').slideUp();
@@ -384,6 +388,67 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).parents('.boardcolumn').insertBefore($(this).parents('.boardcolumn').prev());
     });
+
+
+
+
+
+
+    // 26.07
+    function addItem(container, template) {
+        container.append(template);
+    }
+
+    const tmpl = $('#item_template').html();
+    const container = $('#app');
+
+    while (i = 0) {
+        addItem(container, tmpl);
+        i--;
+    }
+
+    // delete element 
+    $(document).on('click', function (e) {
+        let inputText = document.getElementById('input_item').value;
+        if (!$(e.target).closest('.input_item').length && inputText === '') {
+            $(e.target).closest('.item').remove();
+            $('#add_el').show();
+        }
+    });
+
+    // add element
+    $('#add_el').on('click', function () {
+        addItem(container, tmpl);
+        $('#add_el').fadeOut(200);
+        console.log('ku');
+    });
+    
+
+    // close & delete element 
+    container.on('click', '.del_elname', (e) => {
+        $(e.target).closest('.item').remove();
+        $('#add_el').show();
+    });
+
+
+
+    container.on('click', '.add_elname', function () {
+        console.log('YEP');
+        $(this).parents('.boardprbody').find('.input_item').each(function () {
+            let inputText = document.getElementById('input_item').value;
+            console.log(inputText);
+            document.getElementById('boardcoltitle').innerHTML = inputText;
+        });
+
+        $('.item__field').hide();
+        $('#add_el').show();
+        $(this).parents('.boardcolumn').find('.boardcolumn__topsect').show();
+        $(this).parents('.boardcolumn').find('.addtasksect').show();
+    });
+
+
+
+
 
 
 });
