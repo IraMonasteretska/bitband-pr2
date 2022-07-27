@@ -393,61 +393,91 @@ $(document).ready(function () {
 
 
 
+    
 
     // 26.07
     function addItem(container, template) {
         container.append(template);
     }
-
     const tmpl = $('#item_template').html();
     const container = $('#app');
 
-    while (i = 0) {
+
+
+    for (let i = 0; i > 0; i++) {
         addItem(container, tmpl);
-        i--;
     }
+
+    
+    // add element
+    $('.board__addbtn').on('click', function () {
+        console.log('click')
+        addItem(container, tmpl);
+        $('.board__addbtn').fadeOut(10);
+        if ($(window).width() > 991) {
+            var el1 = $('.boardprbody.general');
+            $(el1).each(function (i, e) {
+                var sortable = Sortable.create(e, {
+                    group: 'sharedcol',
+                    animation: 150,
+                    scroll: true,
+                    scrollSensitivity: 30,
+                    scrollSpeed: 10,
+                    ghostClass: "sortable-ghost",
+                    dragClass: "sortable-drag",
+                    emptyInsertThreshold: 60
+                });
+            });
+        }
+        var el = $('.taskswrapper');
+        $(el).each(function (i, e) {
+            var sortable = Sortable.create(e, {
+                group: 'shared',
+                animation: 150,
+                scroll: true,
+                scrollSensitivity: 30,
+                scrollSpeed: 10,
+                ghostClass: "sortable-ghost",
+                dragClass: "sortable-drag",
+                emptyInsertThreshold: 60
+            });
+        });
+    });
+
+
+    // close & delete element 
+    container.on('click', '.del_elname', function (e) {
+        $(e.target).closest('.item').remove();
+        $('.board__addbtn').show();
+       
+    });
+
 
     // delete element 
     $(document).on('click', function (e) {
-        let inputText = document.getElementById('input_item').value;
+        let inputText = $('.input_item').val();
         if (!$(e.target).closest('.input_item').length && inputText === '') {
             $(e.target).closest('.item').remove();
-            $('#add_el').show();
+            $('.board__addbtn').show();
+            
         }
     });
 
-    // add element
-    $('#add_el').on('click', function () {
-        addItem(container, tmpl);
-        $('#add_el').fadeOut(200);
-        console.log('ku');
-    });
-    
 
-    // close & delete element 
-    container.on('click', '.del_elname', (e) => {
-        $(e.target).closest('.item').remove();
-        $('#add_el').show();
-    });
-
-
-
+    // add name
     container.on('click', '.add_elname', function () {
-        console.log('YEP');
-        $(this).parents('.boardprbody').find('.input_item').each(function () {
-            let inputText = document.getElementById('input_item').value;
-            console.log(inputText);
-            document.getElementById('boardcoltitle').innerHTML = inputText;
-        });
 
+        let valInput = $(this).parents('.boardcolumn').find('.input_item').val();
+        if (valInput === '') {
+            $(this).parents('.boardcolumn').remove();
+        }
+
+        $(this).parents('.boardcolumn').find('.boardcoltitle').text(valInput);
         $('.item__field').hide();
-        $('#add_el').show();
+        $('.board__addbtn').show();
         $(this).parents('.boardcolumn').find('.boardcolumn__topsect').show();
         $(this).parents('.boardcolumn').find('.addtasksect').show();
     });
-
-
-
 
 
 

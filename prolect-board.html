@@ -377,8 +377,10 @@
                     <!-- ------------------------------------- -->
 
                     <div class="boardcontainer">
+
                         <div id="app" class="boardprbody general d-flex ">
                             <div class="boardcolumn">
+
                                 <div class="boardcolumn__topsect">
                                     <div class="boardcolumn__title position-relative">
                                         <p>To be completed 2 tasks</p>
@@ -490,6 +492,7 @@
                                 </div>
                             </div>
                             <div class="boardcolumn">
+                               
                                 <div class="boardcolumn__topsect">
                                     <div class="boardcolumn__title position-relative">
                                         <p>In Work 3 Tasks</p>
@@ -589,7 +592,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="boardcolumn__title position-relative">
@@ -693,7 +696,7 @@
                                     </div>
     
                                 </div>
-                            </div>
+                            </div> 
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="boardcolumn__title position-relative">
@@ -784,7 +787,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="boardcolumn">
                                 <div class="boardcolumn__topsect">
                                     <div class="boardcolumn__title position-relative">
@@ -878,10 +881,10 @@
                             </div>
                         </div>
 
-                        <!-- add button -->
-                        <span class="board__addbtn" id="add_el">
+                        <span class="board__addbtn ">
                             <img src="img/new/plus.svg" alt="plus">
                         </span>
+
                     </div>
                 
 
@@ -892,7 +895,7 @@
                         <div class="item boardcolumn">
 
                             <div class="item__field">
-                                <input class="input_item" id="input_item" type="text">
+                                <input class="input_item" type="text">
                                 <div class="item__field-btn">
                                     <span class="add_elname" id="add_elname">
                                         <img src="img/new/ok.svg" alt="ok">
@@ -905,7 +908,7 @@
 
                             <div class="boardcolumn__topsect">
                                 <div class="boardcolumn__title position-relative">
-                                    <p id="boardcoltitle"></p>
+                                    <p class="boardcoltitle"></p>
                                     <div class="headaddtask">
                                         <span class="headaddtask__btn"><img src="img/plusic.svg" alt="addtask"></span>
                                     </div>
@@ -937,7 +940,7 @@
                                 </div>
                                 <div class="taskswrapper dragwrapper">
                                     <div class="addtasksect__field addtasksect__field-top">
-                                        <textarea placeholder="What need to be done?"></textarea>
+                                        <textarea id="addtoptarea5" placeholder="What need to be done?"></textarea>
                                         <div class="dropdown">
                                             <button class="dropdown-toggle drbtn" type="button" id="dropdownMenuButton1"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -947,6 +950,26 @@
                                                 <li><a class="dropdown-item" href="#">Task</a></li>
                                                 <li><a class="dropdown-item bug" href="#">Bug</a></li>
                                             </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <p>Courses for designers in the field of development</p>
+                                        <div class="tasksbox__bottsect">
+                                            <span class="taskid">
+                                                <i><img src="img/checkwhite.png" alt=""></i>
+                                                WEB-5
+                                            </span>
+                                            <span class="usercircle orange">ia</span>
+                                        </div>
+                                    </div>
+                                    <div class="tasksbox" data-bs-toggle="modal" data-bs-target="#taskmodal">
+                                        <p>Find a room for a birthday party</p>
+                                        <div class="tasksbox__bottsect">
+                                            <span class="taskid">
+                                                <i><img src="img/checkwhite.png" alt=""></i>
+                                                WEB-5
+                                            </span>
+                                            <span class="usercircle orange">tp</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1505,10 +1528,6 @@
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/popper.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script> -->
-
 
     <script src="js/lib/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>

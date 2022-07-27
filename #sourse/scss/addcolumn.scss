@@ -1,6 +1,6 @@
 .board__addbtn {
     position: absolute;
-    right: 0;
+    right: 0px;
     top: 35px;
     display: flex;
     align-items: center;
@@ -21,10 +21,12 @@
         filter: brightness(90%);
     }
 }
-.boardcontainer{
+
+.boardcontainer {
     position: relative;
     display: inline-grid;
 }
+
 
 
 .boardprbody {
@@ -95,5 +97,21 @@
                 filter: brightness(90%);
             }
         }
+    }
+}
+
+
+
+
+// responsive //
+@media (max-width: 1199.8px) {
+    .board__addbtn {
+        top: 30px;
+    }
+}
+
+@media (max-width: 575.8px) {
+    .board__addbtn {
+        top: 20px;
     }
 }
