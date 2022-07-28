@@ -393,7 +393,7 @@ $(document).ready(function () {
 
 
 
-    
+
 
     // 26.07
     function addItem(container, template) {
@@ -403,15 +403,13 @@ $(document).ready(function () {
     const container = $('#app');
 
 
-
     for (let i = 0; i > 0; i++) {
         addItem(container, tmpl);
     }
 
-    
+
     // add element
     $('.board__addbtn').on('click', function () {
-        console.log('click')
         addItem(container, tmpl);
         $('.board__addbtn').fadeOut(10);
         if ($(window).width() > 991) {
@@ -442,26 +440,34 @@ $(document).ready(function () {
                 emptyInsertThreshold: 60
             });
         });
+
+
+        // --------------  del element when you click outside the element
+        let valInp;
+        $(document).click(function (e) {
+            $('.input_item').each(function () {
+                valInp = $('.input_item').last().val();
+                let $target = $(e.target);
+                if (!$target.closest('.boardcolumn').last().length && !$(e.target).closest('.board__addbtn').length && valInp === '') {
+                    $('.boardprbody').find('.boardcolumn').last().remove();
+                    $('.board__addbtn').show();
+                }
+                valInp = '';
+            });
+        });
+        // ---
+
     });
+    // ---
 
 
     // close & delete element 
     container.on('click', '.del_elname', function (e) {
         $(e.target).closest('.item').remove();
         $('.board__addbtn').show();
-       
     });
+    //  ---
 
-
-    // delete element 
-    $(document).on('click', function (e) {
-        let inputText = $('.input_item').val();
-        if (!$(e.target).closest('.input_item').length && inputText === '') {
-            $(e.target).closest('.item').remove();
-            $('.board__addbtn').show();
-            
-        }
-    });
 
 
     // add name
@@ -478,6 +484,10 @@ $(document).ready(function () {
         $(this).parents('.boardcolumn').find('.boardcolumn__topsect').show();
         $(this).parents('.boardcolumn').find('.addtasksect').show();
     });
+    //  ---
+
+
+
 
 
 
