@@ -393,7 +393,7 @@ $(document).ready(function () {
     $('#input-tags').selectize({
         delimiter: ',',
         persist: false,
-        create: function(input) {
+        create: function (input) {
             return {
                 value: input,
                 text: input
@@ -402,17 +402,24 @@ $(document).ready(function () {
         plugins: ['remove_button'],
         createOnBlur: true,
         create: true,
-        onItemAdd: function() {
+        onItemAdd: function () {
             $('.tagssection__colors').show();
-            $(this).addClass('active')
-          }
+
+            $(".selectize-control.multi .selectize-input>div").tooltip({
+                placement: "bottom", // position
+                title: "Click to view all tasks from the list"
+            });
+        },
+
 
     });
+
+    
 
     // $('#input-tags').selectize.on('item_add',function(value, $item){
     //     console.log("+")
     //   });
-        
+
 
 
 
@@ -424,7 +431,7 @@ $(document).ready(function () {
     //     }
     // });
 
-    $(document).on('click', '.selectize-dropdown-content', function(){
+    $(document).on('click', '.selectize-dropdown-content', function () {
         $('.tagssection__colors').show();
         console.log("+")
     });
@@ -452,17 +459,30 @@ $(document).ready(function () {
     });
 
     // show tags section
-    $('.tagopen').click(function() {
+    $('.tagopen').click(function () {
         $('.tagsli').addClass('show');
     });
 
     // enable tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
 
+    // -----------------------
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if ($('.item').length) {
+            if (!$target.closest('.selectize-control').length && !$target.closest('.tagssection__colorbox').length && !$target.closest('.tagopen').length) {
+                $('.selectize-input').addClass('border');
+            } else {
+                $('.selectize-input').removeClass('border');
+            }
+        }
+       
+    });
 
+    
 
 
 
