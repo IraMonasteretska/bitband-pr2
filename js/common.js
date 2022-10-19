@@ -386,4 +386,92 @@ $(document).ready(function () {
     });
 
 
+
+
+    // new
+
+    $('#input-tags').selectize({
+        delimiter: ',',
+        persist: false,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        },
+        plugins: ['remove_button'],
+        createOnBlur: true,
+        create: true,
+        onItemAdd: function() {
+            $('.tagssection__colors').show();
+            $(this).addClass('active')
+          }
+
+    });
+
+    // $('#input-tags').selectize.on('item_add',function(value, $item){
+    //     console.log("+")
+    //   });
+        
+
+
+
+    // $(document).click(function (e) {
+    //     let $targettag = $(e.target);
+    //     if ($targettag.closest('.item').length) {
+    //         $('.item').removeClass('test');
+    //         $($targettag).addClass('test');
+    //     }
+    // });
+
+    $(document).on('click', '.selectize-dropdown-content', function(){
+        $('.tagssection__colors').show();
+        console.log("+")
+    });
+
+
+    $(document).on('click', '.tagssection__colors span', function () {
+        let colorTag = $(this).attr("data-color");
+        $('.item.active').css('background', colorTag);
+    });
+
+    // close colors box
+    $(document).click(function (e) {
+        let $target = $(e.target);
+        if (!$target.closest('.selectize-control').length && !$target.closest('.tagssection__colorbox').length) {
+            $('.tagssection__colors').hide();
+        }
+    });
+    // add tag btn
+    $(document).click(function () {
+        if ($("#input-tags-selectized").is(":focus")) {
+            $('.addtagbtn').hide();
+        } else {
+            $('.addtagbtn').show();
+        }
+    });
+
+    // show tags section
+    $('.tagopen').click(function() {
+        $('.tagsli').addClass('show');
+    });
+
+    // enable tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+
+
+
+
+
+
+
+
+
+
 });
+
+
